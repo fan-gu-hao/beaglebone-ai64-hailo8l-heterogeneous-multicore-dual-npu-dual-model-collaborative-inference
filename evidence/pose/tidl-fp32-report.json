@@ -1,0 +1,37 @@
+{
+  "onnx_sha256": "dc2935b1ceaa6de68514d91ef5789e014c5087dfebba1cd6402cc50d42bbc635",
+  "run_directory": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-fp32.rvnq8za1",
+  "network": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-fp32.rvnq8za1/tidl_net_pose_fp32.bin",
+  "io_config": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-fp32.rvnq8za1/tidl_io_pose_fp32_1.bin",
+  "mode": "host_fp32_reference",
+  "input": "RGB uint8 NCHW, normalization embedded in TIDL",
+  "output_shape": [
+    3,
+    17,
+    64,
+    48
+  ],
+  "tests": [
+    {
+      "name": "中灰影像",
+      "max_abs_error": 7.80448317527771e-07,
+      "mean_abs_error": 6.293338117302483e-08,
+      "passed": true
+    },
+    {
+      "name": "隨機影像一",
+      "max_abs_error": 6.109476089477539e-07,
+      "mean_abs_error": 5.095982302805169e-08,
+      "passed": true
+    },
+    {
+      "name": "隨機影像二",
+      "max_abs_error": 7.450580596923828e-07,
+      "mean_abs_error": 5.1102411191550345e-08,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "quantized": false,
+  "ti_hardware_verified": false
+}

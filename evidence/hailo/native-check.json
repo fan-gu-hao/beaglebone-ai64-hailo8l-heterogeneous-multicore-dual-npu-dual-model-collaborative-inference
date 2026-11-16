@@ -1,0 +1,52 @@
+{
+  "parsed_har_sha256": "0659fafbb6b718b5ae151edfc2286a55887878f8fa2ad58af8f4b0fe34c5166b",
+  "onnx_sha256": "32151df2e9e6b919d140eab881d96aa980fb8d0bf39b8f740c9c9367e3ae185d",
+  "preparation_report_sha256": "41cd1d1d1f6f642a2958d9aadd22fdbe0beeda3de719d400390128d5632c0b64",
+  "passed": true,
+  "comparisons": [
+    {
+      "node": "/model.22/cv2.0/cv2.0.2/Conv",
+      "max_abs_error": 3.814697265625e-05,
+      "mean_abs_error": 1.2407891745169763e-06,
+      "passed": true
+    },
+    {
+      "node": "/model.22/cv3.0/cv3.0.2/Conv",
+      "max_abs_error": 3.24249267578125e-05,
+      "mean_abs_error": 1.8356786313233897e-06,
+      "passed": true
+    },
+    {
+      "node": "/model.22/cv2.1/cv2.1.2/Conv",
+      "max_abs_error": 8.869171142578125e-05,
+      "mean_abs_error": 1.360679902973061e-06,
+      "passed": true
+    },
+    {
+      "node": "/model.22/cv3.1/cv3.1.2/Conv",
+      "max_abs_error": 5.91278076171875e-05,
+      "mean_abs_error": 2.575122834969079e-06,
+      "passed": true
+    },
+    {
+      "node": "/model.22/cv2.2/cv2.2.2/Conv",
+      "max_abs_error": 5.0067901611328125e-05,
+      "mean_abs_error": 1.5453098285433953e-06,
+      "passed": true
+    },
+    {
+      "node": "/model.22/cv3.2/cv3.2.2/Conv",
+      "max_abs_error": 0.0001373291015625,
+      "mean_abs_error": 2.833314283634536e-06,
+      "passed": true
+    }
+  ],
+  "rtol": 0.002,
+  "atol": 0.002,
+  "images": [
+    "calibration/01_0205.jpg",
+    "calibration/02_0153.jpg",
+    "calibration/03_0225.jpg",
+    "calibration/04_0090.jpg"
+  ]
+}

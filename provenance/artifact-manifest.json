@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "binaries_in_repository": false,
+  "note": "Recorded identities of validated development artifacts. Rebuilds can produce different hashes; preserve new provenance rather than bypassing integrity gates.",
+  "artifacts": [
+    {
+      "description": "YOLOv8n checkpoint",
+      "sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36"
+    },
+    {
+      "description": "YOLOv8n FP32 ONNX",
+      "sha256": "32151df2e9e6b919d140eab881d96aa980fb8d0bf39b8f740c9c9367e3ae185d"
+    },
+    {
+      "description": "YOLOv8n parsed HAR",
+      "sha256": "0659fafbb6b718b5ae151edfc2286a55887878f8fa2ad58af8f4b0fe34c5166b"
+    },
+    {
+      "description": "YOLOv8n quantized HAR",
+      "sha256": "23fe4fa0d4647f3b7a5da171d38b7702eb3fc17763beac869b5c595d9dabcaa6"
+    },
+    {
+      "description": "Hailo-8L compiled HEF",
+      "sha256": "317500776eaf552016a08e6171e050a24f6c48c0d22fbe585c17b467a8999674"
+    },
+    {
+      "description": "MobileNetV2 pose checkpoint",
+      "sha256": "d1e58e7b3b932552fd97e9182fff7d81994a44753962ac568a2fd087e2aad4cd"
+    },
+    {
+      "description": "MobileNetV2 pose FP32 ONNX",
+      "sha256": "dc2935b1ceaa6de68514d91ef5789e014c5087dfebba1cd6402cc50d42bbc635"
+    },
+    {
+      "description": "TIDL INT8 network",
+      "sha256": "97107047581accd17a48fcd10c1db0429deefed9a42d6e02eb090c4ceb2fb3bf"
+    },
+    {
+      "description": "TIDL IO description",
+      "sha256": "b0d9378819158b7aa2b3d5b9a34241933366f2785f949b722f82b3d11989cf37"
+    },
+    {
+      "description": "HX711 R5F firmware",
+      "sha256": "764a9ca96bd0b31790aa30d05d4e817b7619d8a6f6573eaf9db4adab361380f5"
+    },
+    {
+      "description": "C71 fixed-image selftest firmware",
+      "sha256": "fc4f835f0c17197cd957ee414deb2374de07e44a928d8de22ad05deb5c655a2e"
+    },
+    {
+      "description": "C71 V2 external-image firmware",
+      "sha256": "090670a08ad59b341da7219cd6e47c7a6d26e5fe4eae0a110782f28b4ed80399"
+    }
+  ]
+}

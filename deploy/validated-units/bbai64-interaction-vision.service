@@ -1,0 +1,28 @@
+# BBAI64 interaction autostart v1
+[Unit]
+Description=BBAI64 Hailo and C71 interaction web
+After=network.target bbai64-interaction-sensors.service
+Wants=bbai64-interaction-sensors.service
+StartLimitIntervalSec=180
+StartLimitBurst=3
+RequiresMountsFor=/home/debian/interaction_demo
+PartOf=bbai64-interaction.target
+
+[Service]
+Type=exec
+User=root
+WorkingDirectory=/home/debian/interaction_demo/service-v1.5m70koqx
+Environment=PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+StandardInput=null
+StandardOutput=journal
+StandardError=journal
+KillSignal=SIGINT
+KillMode=mixed
+TimeoutStopSec=30
+SuccessExitStatus=130
+ExecStartPre=/usr/bin/python3 /home/debian/interaction_demo/service-v1.5m70koqx/service_support.py devices vision
+ExecStart=/usr/bin/python3 -u /home/debian/interaction_demo/service-v1.5m70koqx/interaction_actions.py
+TimeoutStartSec=90
+Restart=on-failure
+RestartSec=5

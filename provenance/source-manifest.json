@@ -1,0 +1,1219 @@
+{
+  "schema": 1,
+  "source": "user-supplied source-review.txt",
+  "snapshot_file_count": 218,
+  "collection_sha256": "a3d5db0a6f104b82e4964fb0a67083e69fa99b709e8180634519d0c65c62ce4c",
+  "files": [
+    {
+      "path": "runtime/c71_pose_client.py",
+      "snapshot_path": "board/app/c71_pose_client.py",
+      "sha256": "6880e10a1a09cca0183a3e319341f538cd9a37449c80d536dc6213d87d8d2f74",
+      "bytes": 14397
+    },
+    {
+      "path": "runtime/interaction_actions.py",
+      "snapshot_path": "board/app/interaction_actions.py",
+      "sha256": "64f5056d5f5a1492ee93522417fd7aeafb67273b836a89c6a242b04bf2ca6375",
+      "bytes": 9458
+    },
+    {
+      "path": "runtime/interaction_app.py",
+      "snapshot_path": "board/app/interaction_app.py",
+      "sha256": "7268752fbda8ec0b92ebc2c4774fc71540d4fbaafe558865ec3af7dcce67d67c",
+      "bytes": 13086
+    },
+    {
+      "path": "runtime/interaction_fusion.py",
+      "snapshot_path": "board/app/interaction_fusion.py",
+      "sha256": "06e738cd4b26f2edfb05b2769097db3364180a5189ec56bf417fd58ec2af7531",
+      "bytes": 16837
+    },
+    {
+      "path": "runtime/interaction_pose_app.py",
+      "snapshot_path": "board/app/interaction_pose_app.py",
+      "sha256": "751e763d9d8725450874b0d1d9eff74e2ce986951d0fe2c3dd222b610fc29e61",
+      "bytes": 13202
+    },
+    {
+      "path": "runtime/interaction_pose_stable.py",
+      "snapshot_path": "board/app/interaction_pose_stable.py",
+      "sha256": "9ddd2b2a55d7e2d084514c880efd84a67a0ea8053cee28c07146477e5698f615",
+      "bytes": 10062
+    },
+    {
+      "path": "runtime/interaction_sensor_io.py",
+      "snapshot_path": "board/app/interaction_sensor_io.py",
+      "sha256": "88672e0a3ea578eba0e192cfa97794f1cee88ebac44adf1dcd1cb3db357c9af6",
+      "bytes": 5932
+    },
+    {
+      "path": "runtime/interaction_sensors.py",
+      "snapshot_path": "board/app/interaction_sensors.py",
+      "sha256": "5b5a9795878120c9b45ed12c2f4f25e687cd7c6b887f2e0104e34f4f01476e6d",
+      "bytes": 14279
+    },
+    {
+      "path": "runtime/service_support.py",
+      "snapshot_path": "board/app/service_support.py",
+      "sha256": "163fb296ee197b71101a75bc5379683658aec7cab5ed7f06de6d522db096ffaa",
+      "bytes": 6150
+    },
+    {
+      "path": "native/hailo_worker.cpp",
+      "snapshot_path": "board/native/hailo_worker.cpp",
+      "sha256": "a3430e8fd3fc2670dc7bd86063947c5a05efe018f59201609afcab7a814bc208",
+      "bytes": 5349
+    },
+    {
+      "path": "bringup/board/manual-baseline/c71_pose_client.py",
+      "snapshot_path": "board/original/c71_pose_client.py",
+      "sha256": "204d09c32f1990cb79d2444fd6f061fd183aeb71fd8cc2dc22b04e768a5cdf5c",
+      "bytes": 17666
+    },
+    {
+      "path": "bringup/board/manual-baseline/interaction_actions.py",
+      "snapshot_path": "board/original/interaction_actions.py",
+      "sha256": "a0f2b94b66b09c05b098c23f01db497edacab84cf5869cca90c995e10dcf45e9",
+      "bytes": 10253
+    },
+    {
+      "path": "bringup/board/manual-baseline/interaction_app.py",
+      "snapshot_path": "board/original/interaction_app.py",
+      "sha256": "c9bd93b993f800442c0a49e71e7b193333924bc92ea779b85af1dcd03c59cd65",
+      "bytes": 12974
+    },
+    {
+      "path": "bringup/board/manual-baseline/interaction_fusion.py",
+      "snapshot_path": "board/original/interaction_fusion.py",
+      "sha256": "d67390a886a2228304811a99552e458356f75fc1eed80289952a44067f0dc0aa",
+      "bytes": 16982
+    },
+    {
+      "path": "bringup/board/manual-baseline/interaction_pose_app.py",
+      "snapshot_path": "board/original/interaction_pose_app.py",
+      "sha256": "4a5271706ce015dca57173a9d9af323ba597460c5f391c4e886f7edf4aa46ece",
+      "bytes": 13808
+    },
+    {
+      "path": "bringup/board/manual-baseline/interaction_pose_stable.py",
+      "snapshot_path": "board/original/interaction_pose_stable.py",
+      "sha256": "5de5009c870a758af61fab67feb4c46807e8156fab75d1066423f978ec6aa53c",
+      "bytes": 10593
+    },
+    {
+      "path": "bringup/board/manual-baseline/interaction_sensor_io.py",
+      "snapshot_path": "board/original/interaction_sensor_io.py",
+      "sha256": "3c91785c3a4c48c5e000fabdb34449a508f2070de7acbeb65a0b6aaa06d206f4",
+      "bytes": 6511
+    },
+    {
+      "path": "bringup/board/manual-baseline/interaction_sensors.py",
+      "snapshot_path": "board/original/interaction_sensors.py",
+      "sha256": "407386bba6c342cd5eff6e6588cdcb2d8b0552fbcf9aba209d595e9119741b96",
+      "bytes": 14670
+    },
+    {
+      "path": "bringup/board/install_interaction_boot.py",
+      "snapshot_path": "board/deploy/install_interaction_boot.py",
+      "sha256": "317f18094a35e2ee54ef4b2a80700cca041b3c1620fe388df461c8fcec11cf49",
+      "bytes": 19511
+    },
+    {
+      "path": "runtime/support/c71_pose_selftest.py",
+      "snapshot_path": "board/support/c71_pose_selftest.py",
+      "sha256": "77dbd6dbc204c82960e7291b4ce0eddb2f2a8531b096d2e8b58c89bb5717fa26",
+      "bytes": 18150
+    },
+    {
+      "path": "deploy/validated-units/bbai64-interaction-sensors.service",
+      "snapshot_path": "board/systemd/bbai64-interaction-sensors.service",
+      "sha256": "24742581636463f23650875c8846d742104ad438d9a34b9e5e87a85ad39c891b",
+      "bytes": 1036
+    },
+    {
+      "path": "deploy/validated-units/bbai64-interaction-vision.service",
+      "snapshot_path": "board/systemd/bbai64-interaction-vision.service",
+      "sha256": "e3574a94df177c7bfb13f9c8f00292c844f6d003460a5cc323c33d5d0083a878",
+      "bytes": 950
+    },
+    {
+      "path": "deploy/validated-units/bbai64-interaction.target",
+      "snapshot_path": "board/systemd/bbai64-interaction.target",
+      "sha256": "2efe22b6149b7e605f04d019d6d5751059b6cb82135d0217553eae75e2c6f635",
+      "bytes": 283
+    },
+    {
+      "path": "evidence/board/boot-validation.json",
+      "snapshot_path": "board/reports/boot-validation.json",
+      "sha256": "ee31947edb4a5e555c1279e8f992e5d44955d47636ec71b3c843f4b6d3003b5c",
+      "bytes": 1310
+    },
+    {
+      "path": "evidence/board/c71-memory-probe.json",
+      "snapshot_path": "board/reports/c71-memory-probe.json",
+      "sha256": "69d2a5c3ecad3310f628e45fafe17859d15d693c808aa84df103d3aa15936cea",
+      "bytes": 14055
+    },
+    {
+      "path": "evidence/board/c71-pose-v2-build.json",
+      "snapshot_path": "board/reports/c71-pose-v2-build.json",
+      "sha256": "2324cb0b11d37df97f4e1451813de18f538649a2948bcd0b48a933cc355aa3de",
+      "bytes": 2274
+    },
+    {
+      "path": "evidence/board/service-manifest.json",
+      "snapshot_path": "board/reports/service-manifest.json",
+      "sha256": "cb3dfe3639467d049842374e1e10b4cc6f591629138b50119b4d035e40c231ba",
+      "bytes": 1904
+    },
+    {
+      "path": "evidence/board/config/active-model.json",
+      "snapshot_path": "board/config/active-model.json",
+      "sha256": "2f39c2f0a9efb4eaf238965770f6de0d15837b310ae147c2ef7b59924eab7f96",
+      "bytes": 237
+    },
+    {
+      "path": "evidence/board/config/scale_roi.json",
+      "snapshot_path": "board/config/scale_roi.json",
+      "sha256": "61ee4fcf8ec22afdd88467273ef5090249f09a33ed6fd407a4f66f473095b59d",
+      "bytes": 78
+    },
+    {
+      "path": "evidence/board/boot/extlinux.conf",
+      "snapshot_path": "board/reference/extlinux.conf",
+      "sha256": "5b46d76a207436f931a04baf023b0dc41fac7759ba04e84274adebc590ba837c",
+      "bytes": 1232
+    },
+    {
+      "path": "model-pipelines/hailo/compile_yolov8n.py",
+      "snapshot_path": "host/hailo/compile_yolov8n.py",
+      "sha256": "f5e65d637dc5eb29e81519f50ac795a0a146b60889e842551200240eb9776e78",
+      "bytes": 2726
+    },
+    {
+      "path": "model-pipelines/hailo/dfc-python",
+      "snapshot_path": "host/hailo/dfc-python",
+      "sha256": "95512492152e1119a77d3a9da741c8708e81e71cfd56b7b1dc6dbac6d857b90e",
+      "bytes": 710
+    },
+    {
+      "path": "model-pipelines/hailo/evaluate_yolov8n.py",
+      "snapshot_path": "host/hailo/evaluate_yolov8n.py",
+      "sha256": "faf609f01ad4ece8e0124394434d25e135e2e2d76f728bbbf0c8f46934e6b188",
+      "bytes": 13915
+    },
+    {
+      "path": "model-pipelines/hailo/export_yolov8n.py",
+      "snapshot_path": "host/hailo/export_yolov8n.py",
+      "sha256": "0b52193ea00807dbe65c82ea02deb23bcd5c992cc7306494a25b44f3040edba7",
+      "bytes": 6776
+    },
+    {
+      "path": "model-pipelines/hailo/optimize_yolov8n.py",
+      "snapshot_path": "host/hailo/optimize_yolov8n.py",
+      "sha256": "55738de159c97428aa471b26344d45c7e617ce075d62ee364cc7186f23b78be4",
+      "bytes": 8293
+    },
+    {
+      "path": "model-pipelines/hailo/parse_yolov8n.py",
+      "snapshot_path": "host/hailo/parse_yolov8n.py",
+      "sha256": "81c5e52ff97359bbb004958c41bd41a1b58dee25f7f876d88a55f7b8a82af6d5",
+      "bytes": 5847
+    },
+    {
+      "path": "model-pipelines/hailo/prepare_hailo_data.py",
+      "snapshot_path": "host/hailo/prepare_hailo_data.py",
+      "sha256": "574d912f393fbd59a5c218bdee34060a2c93cde7588226a24f79611a281ed5e1",
+      "bytes": 4573
+    },
+    {
+      "path": "model-pipelines/hailo/environment/venv-dfc-packages.json",
+      "snapshot_path": "host/hailo/environment/venv-dfc-packages.json",
+      "sha256": "dced2a3e587bbc30eb5403feda363fe4a6cab9312e158d7d96ee5f6e43fbf358",
+      "bytes": 4592
+    },
+    {
+      "path": "model-pipelines/hailo/environment/venv-export-packages.json",
+      "snapshot_path": "host/hailo/environment/venv-export-packages.json",
+      "sha256": "e8e09ba72783768008e8d55dc1b58fce8de221410cab0f618b80f2e1a3d26778",
+      "bytes": 1062
+    },
+    {
+      "path": "evidence/hailo/compile-report.json",
+      "snapshot_path": "host/hailo/reports/compile-report.json",
+      "sha256": "b7c2d7e108c31daa6d370a80e6667cb01f75923e41a171f2ea08dbf7ef8b27d3",
+      "bytes": 739
+    },
+    {
+      "path": "evidence/hailo/dfc-gpu-check.json",
+      "snapshot_path": "host/hailo/reports/dfc-gpu-check.json",
+      "sha256": "7ae2c07b93fb78a2969bc9d7cce1e8eb711f7a882e8959ac0a78dcb3c1c72d8d",
+      "bytes": 1516
+    },
+    {
+      "path": "evidence/hailo/export-report.json",
+      "snapshot_path": "host/hailo/reports/export-report.json",
+      "sha256": "48de10e856969464051e33a136f8495d471b9f95eaed6a10dd1a5313ecadd14d",
+      "bytes": 1687
+    },
+    {
+      "path": "evidence/hailo/hailo-end-nodes.json",
+      "snapshot_path": "host/hailo/reports/hailo-end-nodes.json",
+      "sha256": "174c33de87a1189da38d5209f0a2dbdf64688a78e479a32739094fd4dc295eb5",
+      "bytes": 207
+    },
+    {
+      "path": "evidence/hailo/native-check.json",
+      "snapshot_path": "host/hailo/reports/native-check.json",
+      "sha256": "91cca0c56fa5a6e57405a9335de8605fc5bb010e745237dc983efa18d1ed7dbc",
+      "bytes": 1529
+    },
+    {
+      "path": "evidence/hailo/parse-report.json",
+      "snapshot_path": "host/hailo/reports/parse-report.json",
+      "sha256": "cfa5ec3f895989db521cced3a8becc239c95dac8909e35ed24b1daeec32be18e",
+      "bytes": 2073
+    },
+    {
+      "path": "evidence/hailo/quantize-report.json",
+      "snapshot_path": "host/hailo/reports/quantize-report.json",
+      "sha256": "fbc4d0c518122bc053cf689e12767ebe2e3084e1b90e500a885a069545535a4b",
+      "bytes": 920
+    },
+    {
+      "path": "model-pipelines/pose/bb_pose_service.c",
+      "snapshot_path": "host/pose/bb_pose_service.c",
+      "sha256": "1fdda7e0684baa1aa1e8d8c2b8f3ab5517a7d774ea987af2a3b79859339ac326",
+      "bytes": 10987
+    },
+    {
+      "path": "model-pipelines/pose/bb_pose_transport_v2.inc",
+      "snapshot_path": "host/pose/bb_pose_transport_v2.inc",
+      "sha256": "90680596846b273c9ef281fccdf937551b6d50f12ae50358719e9ffd8c93668b",
+      "bytes": 5628
+    },
+    {
+      "path": "model-pipelines/pose/build_c71_pose_selftest.py",
+      "snapshot_path": "host/pose/build_c71_pose_selftest.py",
+      "sha256": "d227f22e9205735ea51e11572a0a99a99a01719ca7fe77a761deda930283989c",
+      "bytes": 12625
+    },
+    {
+      "path": "model-pipelines/pose/build_c71_tidl_link.py",
+      "snapshot_path": "host/pose/build_c71_tidl_link.py",
+      "sha256": "6e08a31f673a5fd24ec4da1aa90456aea8ff5d04c49ec7035933e0c14598b909",
+      "bytes": 11894
+    },
+    {
+      "path": "model-pipelines/pose/build_tidl_pose_int8.py",
+      "snapshot_path": "host/pose/build_tidl_pose_int8.py",
+      "sha256": "eb2b7b51d7e805116d5bea483ad5718da41ed4633d44a8423d6c9cc4da3584b5",
+      "bytes": 5278
+    },
+    {
+      "path": "model-pipelines/pose/check_tidl_pose_fp32.py",
+      "snapshot_path": "host/pose/check_tidl_pose_fp32.py",
+      "sha256": "0203847558b522fe6d771a02f86c72e1559533f67b1b0c4058cc92e768d79643",
+      "bytes": 7768
+    },
+    {
+      "path": "model-pipelines/pose/evaluate_tidl_pose.py",
+      "snapshot_path": "host/pose/evaluate_tidl_pose.py",
+      "sha256": "a65ce92c293b564f7859e5f5a989510a55e885b875cf42ca06a156eddba13299",
+      "bytes": 10080
+    },
+    {
+      "path": "model-pipelines/pose/export_pose.py",
+      "snapshot_path": "host/pose/export_pose.py",
+      "sha256": "c3322efa37f3f5f859acecab426954211a60078c99f8025058bbbdb2141f07b8",
+      "bytes": 6016
+    },
+    {
+      "path": "model-pipelines/pose/prepare_c71_runtime.py",
+      "snapshot_path": "host/pose/prepare_c71_runtime.py",
+      "sha256": "34530b69c21e58e67d942579ce6d17c0ad8e71dafa31e9af9798cdc99e99044e",
+      "bytes": 10434
+    },
+    {
+      "path": "model-pipelines/pose/prepare_c71_v2.py",
+      "snapshot_path": "host/pose/prepare_c71_v2.py",
+      "sha256": "94b74f32d932484242c8f67af285c9470ed540a7fb1376f78dd8725ae3dff60f",
+      "bytes": 8264
+    },
+    {
+      "path": "model-pipelines/pose/prepare_pose_data.py",
+      "snapshot_path": "host/pose/prepare_pose_data.py",
+      "sha256": "996b6e161f6131a934f1cf7ff9dcdc65eb542987ac6d09bdd7814fee57ca28af",
+      "bytes": 11216
+    },
+    {
+      "path": "model-pipelines/pose/resume_c71_selftest.py",
+      "snapshot_path": "host/pose/resume_c71_selftest.py",
+      "sha256": "4c01813d6987e9a315e6ea31d7f786391d164bdeb5679bb08b179bae9a58e26e",
+      "bytes": 7108
+    },
+    {
+      "path": "model-pipelines/pose/environment/venv-export-packages.json",
+      "snapshot_path": "host/pose/environment/venv-export-packages.json",
+      "sha256": "7a32c30b6c77eb8ff503606044a15f343fae704f8ecc911f79e939eafeeba75e",
+      "bytes": 1027
+    },
+    {
+      "path": "evidence/pose/c71-pose-selftest-build.json",
+      "snapshot_path": "host/pose/reports/c71-pose-selftest-build.json",
+      "sha256": "5e836679270c0496866c69d3e3d576683c3570fc31776a3f4e0de3986880f402",
+      "bytes": 1980
+    },
+    {
+      "path": "evidence/pose/c71-pose-v2-build.json",
+      "snapshot_path": "host/pose/reports/c71-pose-v2-build.json",
+      "sha256": "2324cb0b11d37df97f4e1451813de18f538649a2948bcd0b48a933cc355aa3de",
+      "bytes": 2274
+    },
+    {
+      "path": "evidence/pose/c71-runtime-work.json",
+      "snapshot_path": "host/pose/reports/c71-runtime-work.json",
+      "sha256": "c7301cf9d4449989ef69ea711650b6e8874b4f8ea1be935c9eca00b423787b10",
+      "bytes": 1466
+    },
+    {
+      "path": "evidence/pose/c71-tidl-link-report.json",
+      "snapshot_path": "host/pose/reports/c71-tidl-link-report.json",
+      "sha256": "6c21792cd447e32b5f8c6ea2035661041dc0a6fded25cf82048314e15acff743",
+      "bytes": 1420
+    },
+    {
+      "path": "evidence/pose/export-report.json",
+      "snapshot_path": "host/pose/reports/export-report.json",
+      "sha256": "9d02fdb0ea4d7262510eb01c53352fcf602f5a4600de5ca33636c6cb900c65ac",
+      "bytes": 1608
+    },
+    {
+      "path": "evidence/pose/host-check.json",
+      "snapshot_path": "host/pose/reports/host-check.json",
+      "sha256": "7f9a553b43ed76c8f5a6bf14efd4a070e867ac66f9cd7e34f2553d7b2a63aaa2",
+      "bytes": 2210
+    },
+    {
+      "path": "evidence/pose/pose-package.json",
+      "snapshot_path": "host/pose/reports/pose-package.json",
+      "sha256": "444b7936ae1223bec8f4240e67c9c6006bbb775267e93c92083c6f8563832567",
+      "bytes": 145
+    },
+    {
+      "path": "evidence/pose/pose-validation-report.json",
+      "snapshot_path": "host/pose/reports/pose-validation-report.json",
+      "sha256": "5f42ee9766b6c37dcf2e1e17deb97348e250754a7b72e186a60a5aa8c30a6345",
+      "bytes": 1162
+    },
+    {
+      "path": "evidence/pose/source-model.json",
+      "snapshot_path": "host/pose/reports/source-model.json",
+      "sha256": "0bd05dab29a039ee6a9c75518e1ff9f542b81fbc54425e5f58b68b6284cfea7e",
+      "bytes": 710
+    },
+    {
+      "path": "evidence/pose/tidl-fp32-report.json",
+      "snapshot_path": "host/pose/reports/tidl-fp32-report.json",
+      "sha256": "5bf0900f814ae7a199ce57425069ef354c189b84b8211cb323684cc11cea14e6",
+      "bytes": 1138
+    },
+    {
+      "path": "evidence/pose/tidl-int8-build-report.json",
+      "snapshot_path": "host/pose/reports/tidl-int8-build-report.json",
+      "sha256": "5f0fe7d74a4afcbc2f0babc9cb26833c8db2127a1962f06c0aee330a01ec495c",
+      "bytes": 1215
+    },
+    {
+      "path": "model-pipelines/hailo/model_config/yolov8n.alls",
+      "snapshot_path": "host/hailo/model_config/yolov8n.alls",
+      "sha256": "ec00a4f22763c562c4f7ef76ae30e3425752943ae6ef30e3f258ef399a036abe",
+      "bytes": 363
+    },
+    {
+      "path": "model-pipelines/hailo/model_config/yolov8n_nms.json",
+      "snapshot_path": "host/hailo/model_config/yolov8n_nms.json",
+      "sha256": "a9758c9aebe821d5c1a1478d1c612db03a9bc35d05f9e04d75cbd84a56b4d8bc",
+      "bytes": 658
+    },
+    {
+      "path": "model-pipelines/hailo/model_config/yolov8n_quantize.alls",
+      "snapshot_path": "host/hailo/model_config/yolov8n_quantize.alls",
+      "sha256": "f5c04bbf5c500c38ba4758a1bc4200d92a7386bfce9a706312f4d2b4ead0bf35",
+      "bytes": 658
+    },
+    {
+      "path": "firmware/c71/tools/bb_pose_tidl_api.c",
+      "snapshot_path": "host/c71/local/bb_pose_tidl_api.c",
+      "sha256": "475dbd8aa2724c878a0f3c45bf6b102226e71dbd4ce737b5719f2177405e6c14",
+      "bytes": 420
+    },
+    {
+      "path": "firmware/c71/tools/read_model.c",
+      "snapshot_path": "host/c71/local/read_model.c",
+      "sha256": "3be5edc7228aa564d1142d51037107efee09be047e923fba57ae43977c3f5152",
+      "bytes": 2237
+    },
+    {
+      "path": "evidence/r5f/hx711-build.json",
+      "snapshot_path": "host/hx711/local/hx711-build.json",
+      "sha256": "9decfc59ad585174564b6347c60bf7a27b8811612c464512c2d8c27bf17f49d2",
+      "bytes": 251
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/makefile.mk",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/makefile.mk",
+      "sha256": "a5d2a95e4b9e69dd996f1308569e1723aa0ae2be72914e6ff682d934152c3e73",
+      "bytes": 7476
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/echo_test/makefile",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/echo_test/makefile",
+      "sha256": "aa3deb0bc1e2d30bf3be8382b3bb43ce9a8b0aa5eed8ccfc028bbea50ccdbc70",
+      "bytes": 353
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/echo_test/ipc_echo_test.c",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/echo_test/ipc_echo_test.c",
+      "sha256": "3a4580d3df138371cfa61fe7acd8950febd1b162c66b6aa176e6a7a14e26eaa4",
+      "bytes": 8622
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_testsetup.c",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_testsetup.c",
+      "sha256": "29304d006cac8aae8011de6d467497f2e07bf66347cb8d849d499f91f3813280",
+      "bytes": 17254
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_setup.h",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_setup.h",
+      "sha256": "a6af30dbaaf0d3e15b25a80ae4ce4dd64a92331c48bae10005e1ec3839eed7b0",
+      "bytes": 2599
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.c",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.c",
+      "sha256": "0e0e70839a5b4594f52b615aff3bfb356eef2951792511bebddca06b9ad7e116",
+      "bytes": 3459
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.h",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.h",
+      "sha256": "c6e8ef87498a831fe817e3270e63cf0896bff37c31a6e6a89fbe64dd1678aef0",
+      "bytes": 1955
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/main_tirtos.c",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/main_tirtos.c",
+      "sha256": "6b3779957bc966d342a7547eb6cad46df872ce7a2b071b280e550f1ede6f8409",
+      "bytes": 13744
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_rsctable.h",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_rsctable.h",
+      "sha256": "206e96b527110170e935e2141002f052a9d54951aff8045dccd4ce14b54aa4f7",
+      "bytes": 5681
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.c",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.c",
+      "sha256": "a9cee4742ced51aa24496061ab27f9a5577290cc3986f93a1e9858fe15cf47ec",
+      "bytes": 2675
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.h",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.h",
+      "sha256": "f046237ecbe1e27189ef2e309480c4714d5f5d7866bcbe969732d7d678cfee30",
+      "bytes": 2034
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_math_v1.h",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_math_v1.h",
+      "sha256": "26b551afa3158a92a0f8c4b9e9f35ae27c7da7691679ec1bc02b2c6d85fd4baf",
+      "bytes": 2257
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/build/j721e/config_j721e_c7x.bld",
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/config_j721e_c7x.bld",
+      "sha256": "3c1bd04d89449aba3172027033a71727edd5c89bfd659b6e01aae3aea939fe3f",
+      "bytes": 1899
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/build/j721e/sysbios_c7x.cfg",
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/sysbios_c7x.cfg",
+      "sha256": "2b00495fd4d114e7be54ef2a8714c002a76871236c7808e04a1f2075e402ab6c",
+      "bytes": 4612
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c7x_c7x_1_sysbios.lds",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c7x_c7x_1_sysbios.lds",
+      "sha256": "ef419d694cb2737a7bf10b6edff91db5008da6832cad31d25421b728a9eb56a8",
+      "bytes": 6058
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/ipc_override.cfg",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/ipc_override.cfg",
+      "sha256": "b1961c363c261c08288a67669679c80d1bd2e3c1005c3b462338c17fe9d96e5c",
+      "bytes": 3716
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_assets.h",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_assets.h",
+      "sha256": "bbf5904af69cb8e0cebee8216b002733e8706d6404c66ef2ca00f25380e09f84",
+      "bytes": 458
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_service.c",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_service.c",
+      "sha256": "1fdda7e0684baa1aa1e8d8c2b8f3ab5517a7d774ea987af2a3b79859339ac326",
+      "bytes": 10987
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_tidl_api.c",
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_tidl_api.c",
+      "sha256": "475dbd8aa2724c878a0f3c45bf6b102226e71dbd4ce737b5719f2177405e6c14",
+      "bytes": 420
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/makefile.mk",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/makefile.mk",
+      "sha256": "972c875adb3a443fc68958e5c08cf1f135a251d79d65eaafa995bd4af423e483",
+      "bytes": 4905
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/echo_test/makefile",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/echo_test/makefile",
+      "sha256": "aa3deb0bc1e2d30bf3be8382b3bb43ce9a8b0aa5eed8ccfc028bbea50ccdbc70",
+      "bytes": 353
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/echo_test/ipc_echo_test.c",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/echo_test/ipc_echo_test.c",
+      "sha256": "b7733c40a8a1c64d673ea35afaeb18a4d4b167b28e407cdc9fcb3a15858dccfc",
+      "bytes": 8650
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_testsetup.c",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_testsetup.c",
+      "sha256": "3baa101cc7350e0e72f292cd2f99a8a4f755a0290437b2dfd221743e3d4f2127",
+      "bytes": 17258
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_setup.h",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_setup.h",
+      "sha256": "a6af30dbaaf0d3e15b25a80ae4ce4dd64a92331c48bae10005e1ec3839eed7b0",
+      "bytes": 2599
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.c",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.c",
+      "sha256": "0e0e70839a5b4594f52b615aff3bfb356eef2951792511bebddca06b9ad7e116",
+      "bytes": 3459
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.h",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_utils.h",
+      "sha256": "c6e8ef87498a831fe817e3270e63cf0896bff37c31a6e6a89fbe64dd1678aef0",
+      "bytes": 1955
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/main_tirtos.c",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/main_tirtos.c",
+      "sha256": "c06ce02bb7930c602d64e4521fbe21d82606298d8e093c38e8f1ec57b54e15d3",
+      "bytes": 13686
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_rsctable.h",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_rsctable.h",
+      "sha256": "206e96b527110170e935e2141002f052a9d54951aff8045dccd4ce14b54aa4f7",
+      "bytes": 5681
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.c",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.c",
+      "sha256": "a9cee4742ced51aa24496061ab27f9a5577290cc3986f93a1e9858fe15cf47ec",
+      "bytes": 2675
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.h",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_trace.h",
+      "sha256": "f046237ecbe1e27189ef2e309480c4714d5f5d7866bcbe969732d7d678cfee30",
+      "bytes": 2034
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/bb_math_v1.h",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/bb_math_v1.h",
+      "sha256": "26b551afa3158a92a0f8c4b9e9f35ae27c7da7691679ec1bc02b2c6d85fd4baf",
+      "bytes": 2257
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/build/j721e/config_j721e_r5f.bld",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/config_j721e_r5f.bld",
+      "sha256": "52e1a1232cc8c297e58353bf48f000359320e05bbed91f26d65b218c27bf1c0b",
+      "bytes": 2173
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/build/j721e/sysbios_r5f.cfg",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/sysbios_r5f.cfg",
+      "sha256": "13eacea2d3e66a10707aafdb54650a237cc8b1f3608239f21e200f0d2ebe2e2a",
+      "bytes": 9146
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_0_freertos.lds",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_0_freertos.lds",
+      "sha256": "b5dfa07c9e81e1cdd5ce3e3ff6cf3bb29e25e43ec24ad7b94ad938d32182970d",
+      "bytes": 466
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/memory_map_ddr.cmd",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/memory_map_ddr.cmd",
+      "sha256": "6102efc320923483a538274cbd5cc313f369e81817123edf2c94bb3d56df1028",
+      "bytes": 5318
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_j721e_default.c",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_j721e_default.c",
+      "sha256": "f13db06d4e9a3bb19bbdd585136993521a4f59373be840da0927aba4726c6cd2",
+      "bytes": 8144
+    },
+    {
+      "path": "firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/bb_hx711_v1.h",
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/bb_hx711_v1.h",
+      "sha256": "87b4a1e110c63b4412acfd98e9c49ef38dc1beaebdc36d9abdeb626915820e97",
+      "bytes": 5505
+    },
+    {
+      "path": "firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_transport_v2.inc",
+      "snapshot_path": "host/pose/bb_pose_transport_v2.inc",
+      "sha256": "90680596846b273c9ef281fccdf937551b6d50f12ae50358719e9ffd8c93668b",
+      "bytes": 5628
+    }
+  ],
+  "excluded": [
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/config_j721e_a72.bld",
+      "sha256": "943096caaba57473befe8632837003bbe9e3c92459c4110ef189cb93d64750e3",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/config_j721e_c66.bld",
+      "sha256": "78b2c9273114cb68f5b33f398af4064196afdfccb98d455d72ef2bfc178fdb9e",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/config_j721e_r5f.bld",
+      "sha256": "52e1a1232cc8c297e58353bf48f000359320e05bbed91f26d65b218c27bf1c0b",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/sysbios_a72.cfg",
+      "sha256": "d9f70035cb0391dadbe19b1bbfe18337e1de352fb37f9459d979a435317a1844",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/sysbios_c66.cfg",
+      "sha256": "0fd8a5c3ac6b138e3fadeb16688ae0cc3edbe05a2fb9967ea61e9633138af259",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/build/j721e/sysbios_r5f.cfg",
+      "sha256": "13eacea2d3e66a10707aafdb54650a237cc8b1f3608239f21e200f0d2ebe2e2a",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_0_btcm_freertos.lds",
+      "sha256": "ec9d9618c3f7b9661671d3ab27c6c331253a6d981f1ab8b60bc188525834e803",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_0_freertos.lds",
+      "sha256": "29209b04f02560f0319b0156e428a328af600501003a6b5a2cfd814a6308c0ec",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_1_btcm_freertos.lds",
+      "sha256": "2bd933a17821b389735c9c7a6396cb0ff9c4d837a53d0396cd4c1c03cdd44931",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_1_freertos.lds",
+      "sha256": "a71612b52b76e06e730673fac38dd627dff4f96967fa67016cb9ee2a5be82c0b",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_0_btcm_freertos.lds",
+      "sha256": "39e0fcbdbae43225d3b77908ea67f93d5c39ef3e7c07a24cbcd6a7fc748c0584",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_0_freertos.lds",
+      "sha256": "b5dfa07c9e81e1cdd5ce3e3ff6cf3bb29e25e43ec24ad7b94ad938d32182970d",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_1_btcm_freertos.lds",
+      "sha256": "dd741a7b0c2c5bda1df9cd028427ee6a01a6cc0e70587df90ab75183f40e64a1",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_1_freertos.lds",
+      "sha256": "7bbb10733545ba450e4eb4eb7d11b7497b1d9a30a3bba30112cc23a14c958ead",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_0_btcm_freertos.lds",
+      "sha256": "d3e1623aec3a1b476746f4e87e1f0fd31c9173bc676ebc2ad0295b256437752a",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_0_freertos.lds",
+      "sha256": "4f8e545289e825100a5228c3a3f9f255415bc558678f2d8bad21c19432c8c381",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_1_btcm_freertos.lds",
+      "sha256": "304d575ffbc8c357a59e23ff795317f895a0f20acc3a8b7f6f14f27fa019af2c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_1_freertos.lds",
+      "sha256": "b1807cc9568cf3be0764606571e7fbc1be5e23e9ebc7757f80af28a3571c996f",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/memory_map_ddr.cmd",
+      "sha256": "6102efc320923483a538274cbd5cc313f369e81817123edf2c94bb3d56df1028",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_a72_mpu1_0_sysbios.lds",
+      "sha256": "309c88451d530f5ad8d63cd2fe7f9ab5e09c099b3b3b6a84bb8f864567f2bb24",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c66_c66xdsp_1_sysbios.lds",
+      "sha256": "2205d7543c87c04bf4e6f4f59f8a0e8a5ddb36fdcb6f03156573f6233e877fad",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c66_c66xdsp_2_sysbios.lds",
+      "sha256": "7f54aec8b70509c18cc4e7862b763265a96e2358307ebf91a926e770a5eb9d14",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0.lds",
+      "sha256": "a882eb872a435a6b8d24b43e970842f9b4ef512bc1636b933f75af33a6479f56",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_btcm.lds",
+      "sha256": "c5e0417b0447825d8aadbda86bda7da4c8dcc4ca7265edddb412b8384ff4c75c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_btcm_sysbios.lds",
+      "sha256": "242f62e7b7c98500809be49cf891f110aef1bb22b08a6db787647b43129542f6",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_sbl_sysbios.lds",
+      "sha256": "78d40ad0370163571482f640d14dc074c83a639cbfe0be5a4e827e6fcbf4c526",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_sysbios.lds",
+      "sha256": "78d40ad0370163571482f640d14dc074c83a639cbfe0be5a4e827e6fcbf4c526",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_1.lds",
+      "sha256": "356e697161e00c5c9d04026b82e77b95f3696c7443397ece6900baa4c7f68b25",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_1_btcm_sysbios.lds",
+      "sha256": "42a8d5cf938f90273add07e297173fa3765ed3620690180b912bdb8c2b3ca472",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_1_sysbios.lds",
+      "sha256": "499a6e9014176368cebf04a7dad024d82bbf733001fcaa898d81ecf32f2ee013",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_0.lds",
+      "sha256": "4a4ce218ef1312fcfdf961fdfccc97c5a7d093773e913b70a65a96f45e36e580",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_0_btcm_sysbios.lds",
+      "sha256": "e64f5b544c809c45a275c7c1a6885722e3207a8cf106d23b9715c6c9e33794a3",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_0_sysbios.lds",
+      "sha256": "98485bf7b3a9978ecaba392121e8f4811fa83bce57fe4c8a0bf45b3ac8db7199",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_1.lds",
+      "sha256": "fc5da7a30fd2d640e11d9d404f406287ba4b3ab54b47584bb7b3c90bc5825d63",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_1_btcm_sysbios.lds",
+      "sha256": "0fa8c98a7ae846b6e5ea5804a0d23f0ecf2c08aab55be96af363237a14c08412",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_1_sysbios.lds",
+      "sha256": "ddb3d3baf4dcc9f7ae332917d625a4f9203b49da6efaa977b6ae441f1448e1b7",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_0.lds",
+      "sha256": "298ada2b63654d89b0f923b5056a22caf591e6e209c9dc2107ae6c72b901a4e6",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_0_btcm_sysbios.lds",
+      "sha256": "8bdf4c307539ef67787222a2c585922821ba163f65092d58207622717295491c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_0_sysbios.lds",
+      "sha256": "63ebdec9ad2fdd4f6bc72de82fb09e73f00a33ee91744961dbacb312d27b226c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_1.lds",
+      "sha256": "bcd05bf68fd3816b939d7c5b56e6caed4164934e7fef7c9203904de38e2adc7b",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_1_btcm_sysbios.lds",
+      "sha256": "a6ee6ce028b1041bfb9cf231c779904846260a32dd4919d935417b5657e957aa",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_1_sysbios.lds",
+      "sha256": "448758c1598c9a4959a045c660e098fa8814b1240d405ecfd664a3cbbc58d3bd",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/sysbios_r5f.cfg",
+      "sha256": "2db8d6d5feac149ab8a931b42fa950c16de9fa8740e10128c1e674f4fc12a41f",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/sysbios_r5f_btcm.cfg",
+      "sha256": "2b4497cfb57004f291c18c9ea226beea573c1e29454c5fe27ba143e9c769e660",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_am65xx_rsctable.h",
+      "sha256": "8bcbad8b031548a5d1cfe3bbd41a7fe1a6a0c282becf631aaf7b0ae989b4cf52",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_testsetup_baremetal.c",
+      "sha256": "852a244c005e3ac8f019382b6db6d9b8de9a2a267b2f66b6120c2f65c0378f42",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/main_baremetal.c",
+      "sha256": "4574673668c81f82325af2dbd63f05999435c97593a5cabacb6b08be0ee52bed",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_am64x_default.c",
+      "sha256": "38cf6ee01170d59911c897ecbb3578e988ccef6e074fee153b5d6d3ada52ec7c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_am65xx_default.c",
+      "sha256": "730eacbbaf47b8e131784905d99694d8ec54de028b311af1e4d32caf4e8db0b0",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_j7200_default.c",
+      "sha256": "b6a44f30e6b12546aebbe8937244466038c1d213c16267a622a5220ffb598951",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/c71/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_j721e_default.c",
+      "sha256": "f13db06d4e9a3bb19bbdd585136993521a4f59373be840da0927aba4726c6cd2",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hailo/reports/calibration-report.json",
+      "sha256": "41cd1d1d1f6f642a2958d9aadd22fdbe0beeda3de719d400390128d5632c0b64",
+      "reason": "Per-image acquisition metadata or generated graph; binary-free summaries retained in docs"
+    },
+    {
+      "snapshot_path": "host/hailo/reports/yolov8n_parsed_hn.json",
+      "sha256": "5e37f0220d0c981a518b0398dc27b354471f4c6d4e735ac10c0adf49ab3710fd",
+      "reason": "Per-image acquisition metadata or generated graph; binary-free summaries retained in docs"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/config_j721e_a72.bld",
+      "sha256": "943096caaba57473befe8632837003bbe9e3c92459c4110ef189cb93d64750e3",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/config_j721e_c66.bld",
+      "sha256": "78b2c9273114cb68f5b33f398af4064196afdfccb98d455d72ef2bfc178fdb9e",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/config_j721e_c7x.bld",
+      "sha256": "3c1bd04d89449aba3172027033a71727edd5c89bfd659b6e01aae3aea939fe3f",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/sysbios_a72.cfg",
+      "sha256": "d9f70035cb0391dadbe19b1bbfe18337e1de352fb37f9459d979a435317a1844",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/sysbios_c66.cfg",
+      "sha256": "0fd8a5c3ac6b138e3fadeb16688ae0cc3edbe05a2fb9967ea61e9633138af259",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/build/j721e/sysbios_c7x.cfg",
+      "sha256": "2b00495fd4d114e7be54ef2a8714c002a76871236c7808e04a1f2075e402ab6c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_0_btcm_freertos.lds",
+      "sha256": "ec9d9618c3f7b9661671d3ab27c6c331253a6d981f1ab8b60bc188525834e803",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_0_freertos.lds",
+      "sha256": "29209b04f02560f0319b0156e428a328af600501003a6b5a2cfd814a6308c0ec",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_1_btcm_freertos.lds",
+      "sha256": "2bd933a17821b389735c9c7a6396cb0ff9c4d837a53d0396cd4c1c03cdd44931",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu1_1_freertos.lds",
+      "sha256": "a71612b52b76e06e730673fac38dd627dff4f96967fa67016cb9ee2a5be82c0b",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_0_btcm_freertos.lds",
+      "sha256": "39e0fcbdbae43225d3b77908ea67f93d5c39ef3e7c07a24cbcd6a7fc748c0584",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_1_btcm_freertos.lds",
+      "sha256": "dd741a7b0c2c5bda1df9cd028427ee6a01a6cc0e70587df90ab75183f40e64a1",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu2_1_freertos.lds",
+      "sha256": "7bbb10733545ba450e4eb4eb7d11b7497b1d9a30a3bba30112cc23a14c958ead",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_0_btcm_freertos.lds",
+      "sha256": "d3e1623aec3a1b476746f4e87e1f0fd31c9173bc676ebc2ad0295b256437752a",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_0_freertos.lds",
+      "sha256": "4f8e545289e825100a5228c3a3f9f255415bc558678f2d8bad21c19432c8c381",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_1_btcm_freertos.lds",
+      "sha256": "304d575ffbc8c357a59e23ff795317f895a0f20acc3a8b7f6f14f27fa019af2c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/freertos/linker_r5f_mcu3_1_freertos.lds",
+      "sha256": "b1807cc9568cf3be0764606571e7fbc1be5e23e9ebc7757f80af28a3571c996f",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/ipc_override.cfg",
+      "sha256": "b1961c363c261c08288a67669679c80d1bd2e3c1005c3b462338c17fe9d96e5c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_a72_mpu1_0_sysbios.lds",
+      "sha256": "309c88451d530f5ad8d63cd2fe7f9ab5e09c099b3b3b6a84bb8f864567f2bb24",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c66_c66xdsp_1_sysbios.lds",
+      "sha256": "2205d7543c87c04bf4e6f4f59f8a0e8a5ddb36fdcb6f03156573f6233e877fad",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c66_c66xdsp_2_sysbios.lds",
+      "sha256": "7f54aec8b70509c18cc4e7862b763265a96e2358307ebf91a926e770a5eb9d14",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c7x_c7x_1_sysbios.lds",
+      "sha256": "ffa66d36aaa39f7c97edbdfd0b084a2691221519ea2d749ba821710e441e8fd4",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0.lds",
+      "sha256": "a882eb872a435a6b8d24b43e970842f9b4ef512bc1636b933f75af33a6479f56",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_btcm.lds",
+      "sha256": "c5e0417b0447825d8aadbda86bda7da4c8dcc4ca7265edddb412b8384ff4c75c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_btcm_sysbios.lds",
+      "sha256": "242f62e7b7c98500809be49cf891f110aef1bb22b08a6db787647b43129542f6",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_sbl_sysbios.lds",
+      "sha256": "78d40ad0370163571482f640d14dc074c83a639cbfe0be5a4e827e6fcbf4c526",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_0_sysbios.lds",
+      "sha256": "78d40ad0370163571482f640d14dc074c83a639cbfe0be5a4e827e6fcbf4c526",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_1.lds",
+      "sha256": "356e697161e00c5c9d04026b82e77b95f3696c7443397ece6900baa4c7f68b25",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_1_btcm_sysbios.lds",
+      "sha256": "42a8d5cf938f90273add07e297173fa3765ed3620690180b912bdb8c2b3ca472",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu1_1_sysbios.lds",
+      "sha256": "499a6e9014176368cebf04a7dad024d82bbf733001fcaa898d81ecf32f2ee013",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_0.lds",
+      "sha256": "4a4ce218ef1312fcfdf961fdfccc97c5a7d093773e913b70a65a96f45e36e580",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_0_btcm_sysbios.lds",
+      "sha256": "e64f5b544c809c45a275c7c1a6885722e3207a8cf106d23b9715c6c9e33794a3",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_0_sysbios.lds",
+      "sha256": "98485bf7b3a9978ecaba392121e8f4811fa83bce57fe4c8a0bf45b3ac8db7199",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_1.lds",
+      "sha256": "fc5da7a30fd2d640e11d9d404f406287ba4b3ab54b47584bb7b3c90bc5825d63",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_1_btcm_sysbios.lds",
+      "sha256": "0fa8c98a7ae846b6e5ea5804a0d23f0ecf2c08aab55be96af363237a14c08412",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu2_1_sysbios.lds",
+      "sha256": "ddb3d3baf4dcc9f7ae332917d625a4f9203b49da6efaa977b6ae441f1448e1b7",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_0.lds",
+      "sha256": "298ada2b63654d89b0f923b5056a22caf591e6e209c9dc2107ae6c72b901a4e6",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_0_btcm_sysbios.lds",
+      "sha256": "8bdf4c307539ef67787222a2c585922821ba163f65092d58207622717295491c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_0_sysbios.lds",
+      "sha256": "63ebdec9ad2fdd4f6bc72de82fb09e73f00a33ee91744961dbacb312d27b226c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_1.lds",
+      "sha256": "bcd05bf68fd3816b939d7c5b56e6caed4164934e7fef7c9203904de38e2adc7b",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_1_btcm_sysbios.lds",
+      "sha256": "a6ee6ce028b1041bfb9cf231c779904846260a32dd4919d935417b5657e957aa",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_r5f_mcu3_1_sysbios.lds",
+      "sha256": "448758c1598c9a4959a045c660e098fa8814b1240d405ecfd664a3cbbc58d3bd",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/sysbios_r5f.cfg",
+      "sha256": "2db8d6d5feac149ab8a931b42fa950c16de9fa8740e10128c1e674f4fc12a41f",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/j721e/sysbios_r5f_btcm.cfg",
+      "sha256": "2b4497cfb57004f291c18c9ea226beea573c1e29454c5fe27ba143e9c769e660",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_am65xx_rsctable.h",
+      "sha256": "8bcbad8b031548a5d1cfe3bbd41a7fe1a6a0c282becf631aaf7b0ae989b4cf52",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/ipc_testsetup_baremetal.c",
+      "sha256": "852a244c005e3ac8f019382b6db6d9b8de9a2a267b2f66b6120c2f65c0378f42",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/main_baremetal.c",
+      "sha256": "4574673668c81f82325af2dbd63f05999435c97593a5cabacb6b08be0ee52bed",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_am64x_default.c",
+      "sha256": "38cf6ee01170d59911c897ecbb3578e988ccef6e074fee153b5d6d3ada52ec7c",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_am65xx_default.c",
+      "sha256": "730eacbbaf47b8e131784905d99694d8ec54de028b311af1e4d32caf4e8db0b0",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/hx711/pdk-overrides/ti/drv/ipc/examples/common/src/r5f_mpu_j7200_default.c",
+      "sha256": "b6a44f30e6b12546aebbe8937244466038c1d213c16267a622a5220ffb598951",
+      "reason": "Unused processor/OS target from the copied TI SDK"
+    },
+    {
+      "snapshot_path": "host/pose/reports/pose-data-detected.json",
+      "sha256": "2d29de880da1cd0b5952e4e4f11a33a65e759e4e50491fd966f946974c66b539",
+      "reason": "Per-image acquisition metadata or generated graph; binary-free summaries retained in docs"
+    },
+    {
+      "snapshot_path": "host/pose/reports/pose-data-report.json",
+      "sha256": "ccf019dc4c68f02588f2c718d3ee57815860c45719439f906b9b218e39cd8b9a",
+      "reason": "Per-image acquisition metadata or generated graph; binary-free summaries retained in docs"
+    }
+  ]
+}

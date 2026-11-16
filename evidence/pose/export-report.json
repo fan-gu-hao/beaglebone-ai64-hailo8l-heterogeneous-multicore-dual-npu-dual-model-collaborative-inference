@@ -1,0 +1,73 @@
+{
+  "stage": "onnx_fp32",
+  "checkpoint_sha256": "d1e58e7b3b932552fd97e9182fff7d81994a44753962ac568a2fd087e2aad4cd",
+  "mmpose_commit": "0d9a00c1d64b68999e4b2a4ee5ed0d5ac2c3e296",
+  "versions": {
+    "torch": "1.12.0+cpu",
+    "torchvision": "0.13.0+cpu",
+    "mmcv-full": "1.6.2",
+    "mmpose": "0.29.0",
+    "numpy": "1.23.5",
+    "onnx": "1.13.1",
+    "onnxruntime": "1.20.1"
+  },
+  "onnx_path": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/models/mobilenetv2_pose_256x192.fp32.onnx",
+  "onnx_sha256": "dc2935b1ceaa6de68514d91ef5789e014c5087dfebba1cd6402cc50d42bbc635",
+  "opset": 11,
+  "input_shape": [
+    1,
+    3,
+    256,
+    192
+  ],
+  "output_shape": [
+    1,
+    17,
+    64,
+    48
+  ],
+  "preprocessing": {
+    "location": "outside_model",
+    "color": "RGB",
+    "layout": "NCHW",
+    "divide_by": 255,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "operators": {
+    "Add": 10,
+    "BatchNormalization": 3,
+    "Clip": 35,
+    "Constant": 70,
+    "Conv": 53,
+    "ConvTranspose": 3,
+    "Relu": 3
+  },
+  "numerical_tests_synthetic_inputs": [
+    {
+      "name": "中灰影像",
+      "max_abs_error": 6.51925802230835e-07,
+      "mean_abs_error": 3.176768359480775e-08
+    },
+    {
+      "name": "隨機影像一",
+      "max_abs_error": 4.4889748096466064e-07,
+      "mean_abs_error": 2.3076916377817724e-08
+    },
+    {
+      "name": "隨機影像二",
+      "max_abs_error": 9.08970832824707e-07,
+      "mean_abs_error": 2.408297383738045e-08
+    }
+  ],
+  "quantized": false,
+  "ti_hardware_verified": false
+}

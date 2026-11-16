@@ -1,0 +1,14 @@
+{
+  "stage": "compiled",
+  "hw_arch": "hailo8l",
+  "dfc_version": "3.33.1",
+  "source_quantized_har_sha256": "23fe4fa0d4647f3b7a5da171d38b7702eb3fc17763beac869b5c595d9dabcaa6",
+  "source_onnx_sha256": "32151df2e9e6b919d140eab881d96aa980fb8d0bf39b8f740c9c9367e3ae185d",
+  "hef_path": "/home/fan/hailo-model-build/yolov8n-v1/artifacts/yolov8n_custom_hailo8l.hef",
+  "hef_sha256": "317500776eaf552016a08e6171e050a24f6c48c0d22fbe585c17b467a8999674",
+  "hef_bytes": 9403484,
+  "compiled_har_path": "/home/fan/hailo-model-build/yolov8n-v1/artifacts/yolov8n_custom_hailo8l_compiled_model.har",
+  "compiled_har_sha256": "6a9d728f5385242b4308c7fc71239ff3105112f3f79295fc7bee3d5875ca612b",
+  "elapsed_seconds": 221.6,
+  "hardware_verified": false
+}

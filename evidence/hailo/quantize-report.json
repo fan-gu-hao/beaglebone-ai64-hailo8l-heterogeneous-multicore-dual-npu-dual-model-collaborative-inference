@@ -1,0 +1,20 @@
+{
+  "parsed_har_sha256": "0659fafbb6b718b5ae151edfc2286a55887878f8fa2ad58af8f4b0fe34c5166b",
+  "onnx_sha256": "32151df2e9e6b919d140eab881d96aa980fb8d0bf39b8f740c9c9367e3ae185d",
+  "preparation_report_sha256": "41cd1d1d1f6f642a2958d9aadd22fdbe0beeda3de719d400390128d5632c0b64",
+  "passed": true,
+  "stage": "quantized",
+  "hw_arch": "hailo8l",
+  "dfc_version": "3.33.1",
+  "model_script_sha256": "f5c04bbf5c500c38ba4758a1bc4200d92a7386bfce9a706312f4d2b4ead0bf35",
+  "calibration_sha256": "72fb1de993b75ebb161118c70e534edb396968c98cf521b38ae7f7540b658c33",
+  "calibration_count": 1024,
+  "batch_size": 1,
+  "optimization_level": 2,
+  "compression_level": 0,
+  "finetune_epochs": 4,
+  "har_path": "/home/fan/hailo-model-build/yolov8n-v1/artifacts/yolov8n_hailo8l.quantized.har",
+  "har_sha256": "23fe4fa0d4647f3b7a5da171d38b7702eb3fc17763beac869b5c595d9dabcaa6",
+  "elapsed_seconds": 491.3,
+  "accuracy_validated": false
+}

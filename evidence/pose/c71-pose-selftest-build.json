@@ -1,0 +1,96 @@
+{
+  "build_passed": true,
+  "hardware_verified": false,
+  "firmware": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/runtime/c71.02bz9bq0/c71-pose-selftest.xe71",
+  "sha256": "fc4f835f0c17197cd957ee414deb2374de07e44a928d8de22ad05deb5c655a2e",
+  "model_sha256": "97107047581accd17a48fcd10c1db0429deefed9a42d6e02eb090c4ceb2fb3bf",
+  "asset_sha256": {
+    "network": "97107047581accd17a48fcd10c1db0429deefed9a42d6e02eb090c4ceb2fb3bf",
+    "io": "b0d9378819158b7aa2b3d5b9a34241933366f2785f949b722f82b3d11989cf37",
+    "test_input": "ec7dc8ed1c3cadadb7676e434ecb0cb077896c131022bb6360ddef922eadb026"
+  },
+  "segments": [
+    {
+      "start": 2819620864,
+      "end": 2819621016
+    },
+    {
+      "start": 2820669440,
+      "end": 2820669568
+    },
+    {
+      "start": 2822766592,
+      "end": 2822768704
+    },
+    {
+      "start": 2822782976,
+      "end": 2824619192
+    },
+    {
+      "start": 2824622080,
+      "end": 2824687624
+    },
+    {
+      "start": 2824691712,
+      "end": 2824691720
+    },
+    {
+      "start": 2824695808,
+      "end": 2824761352
+    },
+    {
+      "start": 2824765440,
+      "end": 2824765448
+    },
+    {
+      "start": 2824765448,
+      "end": 2824848181
+    },
+    {
+      "start": 2824848184,
+      "end": 2824852280
+    },
+    {
+      "start": 2824863744,
+      "end": 2828036224
+    },
+    {
+      "start": 2828036224,
+      "end": 2829614208
+    },
+    {
+      "start": 2829713408,
+      "end": 2829844480
+    },
+    {
+      "start": 2829844480,
+      "end": 2830006656
+    },
+    {
+      "start": 2831155200,
+      "end": 2831157312
+    },
+    {
+      "start": 2833252352,
+      "end": 2833252416
+    },
+    {
+      "start": 2885681152,
+      "end": 2986344448
+    },
+    {
+      "start": 2986344448,
+      "end": 2996651648
+    }
+  ],
+  "flowCtrl": 0,
+  "required_extra_ddr": {
+    "start": 2885681152,
+    "size": 134217728
+  },
+  "required_msmc": {
+    "start": 1879179264,
+    "size": 8159232
+  },
+  "requires_board_memory_setup": true
+}

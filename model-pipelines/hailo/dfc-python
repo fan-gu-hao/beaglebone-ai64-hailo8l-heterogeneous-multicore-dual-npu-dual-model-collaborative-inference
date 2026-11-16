@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+HAILO_WORK="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+HAILO_PY="$HAILO_WORK/venv-dfc/bin/python"
+
+HAILO_CUDA_LIBS="$("$HAILO_PY" - <<'PY'
+from pathlib import Path
+import sysconfig
+
+root = Path(sysconfig.get_path("purelib")) / "nvidia"
+folders = sorted(p for p in root.glob("*/lib") if p.is_dir())
+if not folders:
+    raise SystemExit("找不到 NVIDIA 程式庫。")
+print(":".join(str(p) for p in folders))
+PY
+)"
+
+export CUDA_VISIBLE_DEVICES=0
+export TF_FORCE_GPU_ALLOW_GROWTH=true
+export TF_CPP_MIN_LOG_LEVEL=1
+export LD_LIBRARY_PATH="$HAILO_CUDA_LIBS${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export PATH="$HAILO_WORK/venv-dfc/bin:$PATH"
+
+exec "$HAILO_PY" "$@"

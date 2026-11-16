@@ -1,0 +1,5 @@
+{
+  "model": "/home/debian/interaction_demo/models/yolov8n_custom_hailo8l-317500776eaf.hef",
+  "sha256": "317500776eaf552016a08e6171e050a24f6c48c0d22fbe585c17b467a8999674",
+  "entry": "/home/debian/interaction_demo/interaction_app.py"
+}

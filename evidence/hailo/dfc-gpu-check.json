@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "python": "3.10.19",
+  "dfc": "3.33.1",
+  "tensorflow": "2.18.0",
+  "target": "hailo8l",
+  "gpu_devices": [
+    "/physical_device:GPU:0"
+  ],
+  "matrix_device": "/job:localhost/replica:0/task:0/device:GPU:0",
+  "convolution_device": "/job:localhost/replica:0/task:0/device:GPU:0",
+  "cuda_visible_devices": "0",
+  "library_path": "/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cublas/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cuda_cupti/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cuda_nvcc/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cuda_runtime/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cudnn/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cufft/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/curand/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cusolver/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/cusparse/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/nccl/lib:/home/fan/hailo-model-build/yolov8n-v1/venv-dfc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+}

@@ -1,0 +1,190 @@
+{
+  "ram": [
+    {
+      "start": 2147483648,
+      "size": 2147483648
+    },
+    {
+      "start": 36507222016,
+      "size": 2147483648
+    }
+  ],
+  "reserved": [
+    {
+      "name": "c66-dma-memory@a6000000",
+      "start": 2785017856,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "c66-dma-memory@a7000000",
+      "start": 2801795072,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "c66-memory@a6100000",
+      "start": 2786066432,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "c66-memory@a7100000",
+      "start": 2802843648,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "c71-dma-memory@a8000000",
+      "start": 2818572288,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "c71-memory@a8100000",
+      "start": 2819620864,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "ipc-memories@aa000000",
+      "start": 2852126720,
+      "size": 29360128,
+      "no_map": true
+    },
+    {
+      "name": "optee@9e800000",
+      "start": 2659188736,
+      "size": 25165824,
+      "no_map": true
+    },
+    {
+      "name": "r5f-dma-memory@a0000000",
+      "start": 2684354560,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "r5f-dma-memory@a1000000",
+      "start": 2701131776,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "r5f-dma-memory@a2000000",
+      "start": 2717908992,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "r5f-dma-memory@a3000000",
+      "start": 2734686208,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "r5f-dma-memory@a4000000",
+      "start": 2751463424,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "r5f-dma-memory@a5000000",
+      "start": 2768240640,
+      "size": 1048576,
+      "no_map": true
+    },
+    {
+      "name": "r5f-memory@a0100000",
+      "start": 2685403136,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "r5f-memory@a1100000",
+      "start": 2702180352,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "r5f-memory@a2100000",
+      "start": 2718957568,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "r5f-memory@a3100000",
+      "start": 2735734784,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "r5f-memory@a4100000",
+      "start": 2752512000,
+      "size": 15728640,
+      "no_map": true
+    },
+    {
+      "name": "r5f-memory@a5100000",
+      "start": 2769289216,
+      "size": 15728640,
+      "no_map": true
+    }
+  ],
+  "fdt_reserved": [],
+  "cores": [
+    {
+      "index": "remoteproc1",
+      "name": "5c00000.r5f",
+      "state": "offline",
+      "firmware": "j7-main-r5f0_0-fw",
+      "node": "bus@100000/r5fss@5c00000/r5f@5c00000",
+      "memory-region": "00 00 00 6c 00 00 00 6d",
+      "reg": "05 c0 00 00 00 00 80 00 05 c1 00 00 00 00 80 00"
+    },
+    {
+      "index": "remoteproc3",
+      "name": "4d80800000.dsp",
+      "state": "offline",
+      "firmware": "j7-c66_0-fw",
+      "node": "bus@100000/dsp@4d80800000",
+      "memory-region": "00 00 00 7d 00 00 00 7b",
+      "reg": "00 00 00 4d 80 80 00 00 00 00 00 00 00 04 80 00 00 00 00 4d 80 e0 00 00 00 00 00 00 00 00 80 00 00 00 00 4d 80 f0 00 00 00 00 00 00 00 00 80 00"
+    },
+    {
+      "index": "remoteproc4",
+      "name": "4d81800000.dsp",
+      "state": "offline",
+      "firmware": "j7-c66_1-fw",
+      "node": "bus@100000/dsp@4d81800000",
+      "memory-region": "00 00 00 7a 00 00 00 7e",
+      "reg": "00 00 00 4d 81 80 00 00 00 00 00 00 00 04 80 00 00 00 00 4d 81 e0 00 00 00 00 00 00 00 00 80 00 00 00 00 4d 81 f0 00 00 00 00 00 00 00 00 80 00"
+    },
+    {
+      "index": "remoteproc5",
+      "name": "64800000.dsp",
+      "state": "offline",
+      "firmware": "j7-c71_0-fw",
+      "node": "bus@100000/dsp@64800000",
+      "memory-region": "00 00 00 81 00 00 00 82",
+      "reg": "00 00 00 00 64 80 00 00 00 00 00 00 00 08 00 00 00 00 00 00 64 e0 00 00 00 00 00 00 00 00 c0 00"
+    }
+  ],
+  "sram": [
+    {
+      "node": "bus@100000/sram@70000000",
+      "compatible": "mmio-sram",
+      "reg": "00 00 00 00 70 00 00 00 00 00 00 00 00 7f 00 00",
+      "ranges": "00 00 00 00 00 00 00 00 70 00 00 00 00 7f 00 00",
+      "phandle": "00 00 00 c3"
+    },
+    {
+      "node": "bus@100000/sram@70000000/atf-sram@0",
+      "reg": "00 00 00 00 00 02 00 00"
+    }
+  ],
+  "active_fdt_sha256": "a3ef844a481b0aa3d9a9d88c37171b0aa4000a473c4aae3575c4f240f9d9796f",
+  "candidate_ok": true,
+  "extlinux": "menu title BeagleBone AI-64 eMMC (extlinux.conf) (swap enabled)\n\ntimeout 50\n\ndefault eMMC (default)\n\nlabel eMMC (failsafe)\n    kernel /Image.gz\n    append console=ttyS2,115200n8 earlycon=ns16550a,mmio32,0x02800000 root=/dev/mmcblk0p3 ro rootfstype=ext4 rootwait net.ifnames=0\n    fdtdir /\n\nlabel copy eMMC to microSD\n    kernel /Image.gz\n    append root=/dev/mmcblk0p3 ro rootfstype=ext4 rootwait net.ifnames=0 init=/usr/sbin/init-beagle-flasher\n    fdtdir /\n    initrd /initrd.img\n\nlabel eMMC (debug)\n    kernel /Image.gz\n    append console=ttyS2,115200n8 earlycon=ns16550a,mmio32,0x02800000 root=/dev/mmcblk0p3 ro rootfstype=ext4 rootwait net.ifnames=0\n    fdtdir /\n    #initrd /initrd.img\n\nlabel eMMC (default)\n    kernel /Image.gz\n    append root=/dev/mmcblk0p3 ro rootfstype=ext4 resume=/dev/mmcblk0p2 rootwait net.ifnames=0 quiet\n    fdt /ti/k3-j721e-beagleboneai64-c66-timers.dtb\n    #fdtoverlays /overlays/<file>.dtbo\n    #initrd /initrd.img\n",
+  "iomem": "00104044-00104063 : 104044.phy phy@4044\n00104200-0010424f : pinctrl-single\n00104280-0010429f : pinctrl-single\n0011c000-0011c2b3 : pinctrl-single\n00600000-006000ff : 600000.gpio gpio@600000\n00601000-006010ff : 601000.gpio gpio@601000\n01800000-0180ffff : GICD\n01900000-019fffff : GICR\n02000000-020000ff : 2000000.i2c i2c@2000000\n02010000-020100ff : 2010000.i2c i2c@2010000\n02020000-020200ff : 2020000.i2c i2c@2020000\n02030000-020300ff : 2030000.i2c i2c@2030000\n02040000-020400ff : 2040000.i2c i2c@2040000\n02050000-020500ff : 2050000.i2c i2c@2050000\n02060000-020600ff : 2060000.i2c i2c@2060000\n02200000-022000ff : 2200000.watchdog watchdog@2200000\n02210000-022100ff : 2210000.watchdog watchdog@2210000\n02430000-024303ff : 2430000.timer timer@2430000\n02440000-024403ff : 2440000.timer timer@2440000\n02450000-024503ff : 2450000.timer timer@2450000\n02460000-024603ff : 2460000.timer timer@2460000\n02470000-024703ff : 2470000.timer timer@2470000\n02480000-024803ff : 2480000.timer timer@2480000\n02490000-024903ff : 2490000.timer timer@2490000\n024a0000-024a03ff : 24a0000.timer timer@24a0000\n024b0000-024b03ff : 24b0000.timer timer@24b0000\n02500000-025003ff : 2500000.timer timer@2500000\n02510000-025103ff : 2510000.timer timer@2510000\n02520000-025203ff : 2520000.timer timer@2520000\n02530000-025303ff : 2530000.timer timer@2530000\n02800000-0280001f : serial\n02910000-02910fff : 2910000.pcie intd_cfg\n02917000-029173ff : 2910000.pcie user_cfg\n03000000-030000ff : 3000000.pwm pwm@3000000\n03020000-030200ff : 3020000.pwm pwm@3020000\n04104000-041040ff : 4104000.cdns-usb cdns-usb@4104000\n04114000-041140ff : 4114000.cdns-usb cdns-usb@4114000\n04a00000-04a0ffff : 4a00000.dss common_m\n04a20000-04a2ffff : 4a00000.dss vidl1\n04a30000-04a3ffff : 4a00000.dss vidl2\n04a50000-04a5ffff : 4a00000.dss vid1\n04a60000-04a6ffff : 4a00000.dss vid2\n04a70000-04a7ffff : 4a00000.dss ovr1\n04a80000-04a8ffff : 4a00000.dss vp1\n04a90000-04a9ffff : 4a00000.dss ovr2\n04aa0000-04aaffff : 4a00000.dss vp2\n04ab0000-04abffff : 4a00000.dss ovr3\n04ac0000-04acffff : 4a00000.dss vp3\n04ad0000-04adffff : 4a00000.dss ovr4\n04ae0000-04aeffff : 4a00000.dss vp4\n04e00000-04e011ff : 4e00000.crypto crypto@4e00000\n04e10000-04e1007c : 4e10000.rng rng@4e10000\n04f40000-04f4001f : a000000.dp-bridge j721e-intg\n04f80000-04f80fff : 4f80000.mmc mmc@4f80000\n04f88000-04f883ff : 4f80000.mmc mmc@4f80000\n04fb0000-04fb0fff : 4fb0000.mmc mmc@4fb0000\n04fb8000-04fb83ff : 4fb0000.mmc mmc@4fb0000\n05000000-0500ffff : 5000000.serdes serdes\n05010000-0501ffff : 5010000.serdes serdes\n05020000-0502ffff : 5020000.serdes serdes\n05030000-0503ffff : 5030000.serdes serdes\n05050000-0505ffff : 5050000.serdes torrent_phy\n05c00000-05c07fff : 5c00000.r5f\n05c10000-05c17fff : 5c00000.r5f\n05d00000-05d07fff : 5d00000.r5f\n05d10000-05d17fff : 5d00000.r5f\n05e00000-05e07fff : 5e00000.r5f\n05e10000-05e17fff : 5e00000.r5f\n05f00000-05f07fff : 5f00000.r5f\n05f10000-05f17fff : 5f00000.r5f\n06000000-0600ffff : 6000000.usb otg\n06020000-0602ffff : 6000000.usb dev\n06400000-0640ffff : 6400000.usb otg\n06410000-0641ffff : xhci\n  06410000-0641ffff : xhci-hcd.0.auto xhci\n06420000-0642ffff : 6400000.usb dev\n0a000000-0a0309ff : a000000.dp-bridge mhdptx\n0a030a00-0a030a3f : 5050000.serdes dptx_phy\n0b004000-0b005fff : b004000.rtu iram\n0b006000-0b007fff : b006000.rtu iram\n0b00a000-0b00b7ff : b00a000.txpru iram\n0b00c000-0b00d7ff : b00c000.txpru iram\n0b020000-0b021fff : b020000.interrupt-controller interrupt-controller@20000\n0b022000-0b0220ff : b034000.pru control\n0b022400-0b0224ff : b034000.pru debug\n0b023000-0b0230ff : b004000.rtu control\n0b023400-0b0234ff : b004000.rtu debug\n0b023800-0b0238ff : b006000.rtu control\n0b023c00-0b023cff : b006000.rtu debug\n0b024000-0b0240ff : b038000.pru control\n0b024400-0b0244ff : b038000.pru debug\n0b025000-0b0250ff : b00a000.txpru control\n0b025400-0b0254ff : b00a000.txpru debug\n0b025800-0b0258ff : b00c000.txpru control\n0b025c00-0b025cff : b00c000.txpru debug\n0b034000-0b036fff : b034000.pru iram\n0b038000-0b03afff : b038000.pru iram\n0b104000-0b105fff : b104000.rtu iram\n0b106000-0b107fff : b106000.rtu iram\n0b10a000-0b10b7ff : b10a000.txpru iram\n0b10c000-0b10d7ff : b10c000.txpru iram\n0b120000-0b121fff : b120000.interrupt-controller interrupt-controller@20000\n0b122000-0b1220ff : b134000.pru control\n0b122400-0b1224ff : b134000.pru debug\n0b123000-0b1230ff : b104000.rtu control\n0b123400-0b1234ff : b104000.rtu debug\n0b123800-0b1238ff : b106000.rtu control\n0b123c00-0b123cff : b106000.rtu debug\n0b124000-0b1240ff : b138000.pru control\n0b124400-0b1244ff : b138000.pru debug\n0b125000-0b1250ff : b10a000.txpru control\n0b125400-0b1254ff : b10a000.txpru debug\n0b125800-0b1258ff : b10c000.txpru control\n0b125c00-0b125cff : b10c000.txpru debug\n0b134000-0b137fff : b134000.pru iram\n0b138000-0b13bfff : b138000.pru iram\n0d800000-0dffffff : 2910000.pcie reg\n28590000-285900ff : 2b800000.ringacc proxy_gcfg\n285c0000-285c00ff : 285c0000.dma-controller gcfg\n2a500000-2a53ffff : 2b800000.ringacc proxy_target\n2a800000-2a83ffff : 285c0000.dma-controller rchanrt\n2aa00000-2aa3ffff : 285c0000.dma-controller tchanrt\n2b000000-2b3fffff : 2b800000.ringacc fifos\n2b800000-2bbfffff : 2b800000.ringacc rt\n30e00000-30e00fff : 30e00000.spinlock spinlock@30e00000\n310d0000-310d03ff : 310d0000.cpts cpts\n31120000-311200ff : 3c000000.ringacc proxy_gcfg\n31150000-311500ff : 31150000.dma-controller gcfg\n31f80000-31f801ff : 31f80000.mailbox mailbox@31f80000\n31f81000-31f811ff : 31f81000.mailbox mailbox@31f81000\n31f82000-31f821ff : 31f82000.mailbox mailbox@31f82000\n31f83000-31f831ff : 31f83000.mailbox mailbox@31f83000\n31f84000-31f841ff : 31f84000.mailbox mailbox@31f84000\n32400000-324fffff : 32c00000.mailbox rt\n32800000-328fffff : 32c00000.mailbox scfg\n32c00000-32cfffff : 32c00000.mailbox target_data\n33000000-3303ffff : 3c000000.ringacc proxy_target\n33d00000-33dfffff : 33d00000.interrupt-controller interrupt-controller@33d00000\n34000000-340fffff : 31150000.dma-controller rchanrt\n35000000-350fffff : 31150000.dma-controller tchanrt\n36600000-36600dff : 36600000.iommu\n36610000-36610dff : 36600000.iommu\n38000000-383fffff : 3c000000.ringacc fifos\n3c000000-3c3fffff : 3c000000.ringacc rt\n40200000-40200fff : 40200000.tscadc tscadc@40200000\n40210000-40210fff : 40210000.tscadc tscadc@40210000\n40f04040-40f04043 : 40f04040.phy phy@4040\n41000000-41007fff : 41000000.r5f\n41010000-41017fff : 41000000.r5f\n41400000-41407fff : 41400000.r5f\n41410000-41417fff : 41400000.r5f\n41c00000-41cfffff : 41c00000.sram sram@41c00000\n42040000-4204034f : 42040000.temperature-sensor temperature-sensor@42040000\n42050000-4205034f : 42040000.temperature-sensor temperature-sensor@42040000\n42110000-421100ff : 42110000.gpio gpio@42110000\n42120000-421200ff : 42120000.i2c i2c@42120000\n43000300-4300030f : 42040000.temperature-sensor temperature-sensor@42040000\n4301c000-4301c177 : pinctrl-single\n44083000-44083fff : 44083000.system-controller debug_messages\n46000000-461fffff : 46000000.ethernet cpsw_nuss\n64800000-6487ffff : 64800000.dsp\n64e00000-64e0bfff : 64800000.dsp\n70000000-707effff : 70000000.sram sram@70000000\n80000000-9e7fffff : System RAM\n  82010000-83c3ffff : Kernel code\n  83c40000-844bffff : reserved\n  844c0000-8486ffff : Kernel data\n  87fff000-87ffffff : reserved\n  8ffe0000-8fffcfff : reserved\n9e800000-a8ffffff : reserved\na9000000-a9ffffff : System RAM\naa000000-abbfffff : reserved\nabc00000-ffffffff : System RAM\n  f3000000-ffffffff : reserved\n880000000-8ffffffff : System RAM\n  8fb000000-8ff5fffff : reserved\n  8ff6b7000-8ff776fff : reserved\n  8ff777000-8ff777fff : reserved\n  8ff778000-8ff7bbfff : reserved\n  8ff7bd000-8ff7bdfff : reserved\n  8ff7be000-8ff7bffff : reserved\n  8ff7c0000-8ff7c0fff : reserved\n  8ff7c1000-8ff7e2fff : reserved\n  8ff7e3000-8ffffffff : reserved\n4100000000-4100000fff : 2910000.pcie cfg\n4100101000-41ffffffff : pcie@2910000\n  4100200000-41002fffff : PCI Bus 0000:01\n    4100200000-4100203fff : 0000:01:00.0\n      4100200000-4100203fff : hailo\n    4100204000-4100207fff : 0000:01:00.0\n      4100204000-4100207fff : hailo\n    4100208000-4100208fff : 0000:01:00.0\n      4100208000-4100208fff : hailo\n4d80800000-4d80847fff : 4d80800000.dsp\n4d80e00000-4d80e07fff : 4d80800000.dsp\n4d80f00000-4d80f07fff : 4d80800000.dsp\n4d81800000-4d81847fff : 4d81800000.dsp\n4d81e00000-4d81e07fff : 4d81800000.dsp\n4d81f00000-4d81f07fff : 4d81800000.dsp\n"
+}

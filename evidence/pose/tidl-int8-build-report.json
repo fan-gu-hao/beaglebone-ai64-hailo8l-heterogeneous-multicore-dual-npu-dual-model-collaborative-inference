@@ -1,0 +1,18 @@
+{
+  "stage": "int8_build_completed_pending_validation",
+  "onnx_sha256": "dc2935b1ceaa6de68514d91ef5789e014c5087dfebba1cd6402cc50d42bbc635",
+  "network": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-int8.u55q892b/tidl_net_pose_int8.bin",
+  "network_sha256": "97107047581accd17a48fcd10c1db0429deefed9a42d6e02eb090c4ceb2fb3bf",
+  "io_config": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-int8.u55q892b/tidl_io_pose_int8_1.bin",
+  "io_sha256": "b0d9378819158b7aa2b3d5b9a34241933366f2785f949b722f82b3d11989cf37",
+  "build_directory": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-int8.u55q892b",
+  "dataset_directory": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/datasets/pose-data.1qyfdob9",
+  "calibration_sha256": "b4eca59d7cfa98701638ddbe497224014c8ddd5bd417c09b7aa94d036a7de1ec",
+  "config": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-int8.u55q892b/import.txt",
+  "log": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/artifacts/tidl-int8.u55q892b/build.log",
+  "elapsed_seconds": 625.9492363220002,
+  "quantized": true,
+  "execute_network_compiler": true,
+  "numerical_validation_passed": false,
+  "ti_hardware_verified": false
+}

@@ -1,0 +1,25 @@
+{
+  "assets": [
+    {
+      "path": "/home/debian/hx711-mcu2_0.elf",
+      "sha256": "764a9ca96bd0b31790aa30d05d4e817b7619d8a6f6573eaf9db4adab361380f5",
+      "bytes": 1987920
+    },
+    {
+      "path": "/home/debian/c71-pose-v2.xe71",
+      "sha256": "090670a08ad59b341da7219cd6e47c7a6d26e5fe4eae0a110782f28b4ed80399",
+      "bytes": 28302472
+    },
+    {
+      "path": "/home/debian/interaction_demo/models/yolov8n_custom_hailo8l-317500776eaf.hef",
+      "sha256": "317500776eaf552016a08e6171e050a24f6c48c0d22fbe585c17b467a8999674",
+      "bytes": 9403484
+    }
+  ],
+  "runtime": "/home/debian/interaction_demo/service-v1.5m70koqx",
+  "health": {
+    "returncode": 0,
+    "text": "bbai64-interaction-sensors.service ： active\nbbai64-interaction-vision.service ： active\n5c00000.r5f ： running\n64800000.dsp ： running\n秤台： {'valid': True, 'present': False, 'delta_counts': 548.5, 'r5_seq': 39871, 'r5_time_us': 4037764775, 'host_updated_ns': 4047382131762}\n溫度： {'valid': True, 'ambient_c': 27.17, 'object_c': 26.93, 'host_received_ns': 4047234622650, 'error': None, 'age_ms': 147.5}\n影像： 9.7 張／秒\n姿態： 8/17\n網頁：http://192.168.1.253:8080\nPASS：服務、兩顆遠端核心、感測資料與更新中的影像均正常。\n"
+  },
+  "kernel": "6.12.24-ti-arm64-r43"
+}

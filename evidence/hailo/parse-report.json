@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "stage": "parsed",
+  "hw_arch": "hailo8l",
+  "dfc_version": "3.33.1",
+  "source_onnx_sha256": "32151df2e9e6b919d140eab881d96aa980fb8d0bf39b8f740c9c9367e3ae185d",
+  "har_path": "/home/fan/hailo-model-build/yolov8n-v1/artifacts/yolov8n_hailo8l.parsed.har",
+  "har_sha256": "0659fafbb6b718b5ae151edfc2286a55887878f8fa2ad58af8f4b0fe34c5166b",
+  "head_mapping": [
+    {
+      "onnx_node": "/model.22/cv2.0/cv2.0.2/Conv",
+      "hailo_layer": "yolov8n/conv41",
+      "role": "框位置分布",
+      "stride": 8,
+      "shape": [
+        -1,
+        80,
+        80,
+        64
+      ]
+    },
+    {
+      "onnx_node": "/model.22/cv3.0/cv3.0.2/Conv",
+      "hailo_layer": "yolov8n/conv42",
+      "role": "類別分數",
+      "stride": 8,
+      "shape": [
+        -1,
+        80,
+        80,
+        80
+      ]
+    },
+    {
+      "onnx_node": "/model.22/cv2.1/cv2.1.2/Conv",
+      "hailo_layer": "yolov8n/conv52",
+      "role": "框位置分布",
+      "stride": 16,
+      "shape": [
+        -1,
+        40,
+        40,
+        64
+      ]
+    },
+    {
+      "onnx_node": "/model.22/cv3.1/cv3.1.2/Conv",
+      "hailo_layer": "yolov8n/conv53",
+      "role": "類別分數",
+      "stride": 16,
+      "shape": [
+        -1,
+        40,
+        40,
+        80
+      ]
+    },
+    {
+      "onnx_node": "/model.22/cv2.2/cv2.2.2/Conv",
+      "hailo_layer": "yolov8n/conv62",
+      "role": "框位置分布",
+      "stride": 32,
+      "shape": [
+        -1,
+        20,
+        20,
+        64
+      ]
+    },
+    {
+      "onnx_node": "/model.22/cv3.2/cv3.2.2/Conv",
+      "hailo_layer": "yolov8n/conv63",
+      "role": "類別分數",
+      "stride": 32,
+      "shape": [
+        -1,
+        20,
+        20,
+        80
+      ]
+    }
+  ],
+  "model_script_path": "/home/fan/hailo-model-build/yolov8n-v1/model_config/yolov8n.alls",
+  "model_script_sha256": "ec00a4f22763c562c4f7ef76ae30e3425752943ae6ef30e3f258ef399a036abe",
+  "nms_config_sha256": "a9758c9aebe821d5c1a1478d1c612db03a9bc35d05f9e04d75cbd84a56b4d8bc",
+  "model_script_applied": false,
+  "quantized": false
+}

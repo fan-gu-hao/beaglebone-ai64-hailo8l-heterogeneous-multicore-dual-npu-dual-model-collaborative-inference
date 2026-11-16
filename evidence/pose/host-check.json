@@ -1,0 +1,20 @@
+{
+  "模型匯入工具": {
+    "path": "/home/fan/ti/bbai64-bringup/sdk-08.00.00.12/ti-processor-sdk-rtos-j721e-evm-08_00_00_12/tidl_j7_08_00_00_10/ti_dl/utils/tidlModelImport/out/tidl_model_import.out",
+    "exists": true,
+    "executable": true,
+    "ldd": "linux-vdso.so.1 (0x000074ecb5d76000)\n\ttidl_model_import.so => /home/fan/ti/bbai64-bringup/sdk-08.00.00.12/ti-processor-sdk-rtos-j721e-evm-08_00_00_12/tidl_j7_08_00_00_10/ti_dl/utils/tidlModelImport/out/tidl_model_import.so (0x000074ecb2200000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000074ecb1e00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000074ecb5c70000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000074ecb5c42000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000074ecb5c3d000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000074ecb1a00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000074ecb5d78000)"
+  },
+  "模型圖編譯工具": {
+    "path": "/home/fan/ti/bbai64-bringup/sdk-08.00.00.12/ti-processor-sdk-rtos-j721e-evm-08_00_00_12/tidl_j7_08_00_00_10/ti_dl/utils/perfsim/ti_cnnperfsim.out",
+    "exists": true,
+    "executable": true,
+    "ldd": "linux-vdso.so.1 (0x000075fb8096c000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000075fb80866000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000075fb7ec00000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000075fb8096e000)"
+  },
+  "主機模擬與量化工具": {
+    "path": "/home/fan/ti/bbai64-bringup/sdk-08.00.00.12/ti-processor-sdk-rtos-j721e-evm-08_00_00_12/tidl_j7_08_00_00_10/ti_dl/test/PC_dsp_test_dl_algo.out",
+    "exists": true,
+    "executable": true,
+    "ldd": "linux-vdso.so.1 (0x000077dff76d5000)\n\tlibdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000077dff76b3000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000077dfec800000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000077dff75ca000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000077dff759c000)\n\tlibpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000077dff7597000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077dfec400000)\n\t/lib64/ld-linux-x86-64.so.2 (0x000077dff76d7000)"
+  }
+}

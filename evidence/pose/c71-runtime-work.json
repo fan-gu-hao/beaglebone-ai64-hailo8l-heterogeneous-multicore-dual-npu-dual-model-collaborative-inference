@@ -1,0 +1,59 @@
+{
+  "directory": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/runtime/c71.02bz9bq0",
+  "sdk": "/home/fan/ti/bbai64-bringup/sdk-08.00.00.12/ti-processor-sdk-rtos-j721e-evm-08_00_00_12",
+  "tidl": "/home/fan/ti/bbai64-bringup/sdk-08.00.00.12/ti-processor-sdk-rtos-j721e-evm-08_00_00_12/tidl_j7_08_00_00_10/ti_dl",
+  "pdk": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/runtime/c71.02bz9bq0/pdk/packages",
+  "original_ipc": "/home/fan/ti/bbai64-bringup/ipc-compute.UVo6Tl",
+  "model_package": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/deployment/pose-mobilenetv2-36doiant",
+  "target_core": "c7x_1",
+  "remoteproc_name": "64800000.dsp",
+  "api_compile_passed": true,
+  "hardware_verified": false,
+  "model_interface": {
+    "net_version": "0x20210723",
+    "layers": 69,
+    "dataflow_offset": 9788544,
+    "network_header_bytes": 3235916,
+    "io_header_bytes": 37256,
+    "input": {
+      "shape": [
+        1,
+        3,
+        256,
+        192
+      ],
+      "type": 0,
+      "layout": 0,
+      "pitch": 49987,
+      "pad_ltrb": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "scale": 1,
+      "zero_point": 0,
+      "data_id": 0
+    },
+    "output": {
+      "shape": [
+        1,
+        17,
+        64,
+        48
+      ],
+      "type": 1,
+      "layout": 0,
+      "pitch": 5040,
+      "pad_ltrb": [
+        8,
+        2,
+        0,
+        24
+      ],
+      "scale": 169.510345,
+      "zero_point": 0,
+      "data_id": 67
+    }
+  }
+}

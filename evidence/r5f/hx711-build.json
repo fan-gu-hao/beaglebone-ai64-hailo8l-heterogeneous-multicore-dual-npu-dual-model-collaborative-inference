@@ -1,0 +1,7 @@
+{
+  "os": "freertos",
+  "target": "ipc_echo_test_freertos",
+  "core": "mcu2_0",
+  "firmware": "/home/fan/ti/bbai64-bringup/hx711-r5f.ph2mnk95/firmware/hx711-mcu2_0.elf",
+  "sha256": "764a9ca96bd0b31790aa30d05d4e817b7619d8a6f6573eaf9db4adab361380f5"
+}

@@ -1,0 +1,8 @@
+# BBAI64 interaction autostart v1
+[Unit]
+Description=BBAI64 complete interaction demonstration
+Wants=bbai64-interaction-sensors.service bbai64-interaction-vision.service
+After=bbai64-interaction-sensors.service bbai64-interaction-vision.service
+
+[Install]
+WantedBy=multi-user.target

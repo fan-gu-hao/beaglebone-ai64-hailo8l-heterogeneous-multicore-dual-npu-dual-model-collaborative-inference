@@ -1,0 +1,25 @@
+# BBAI64 interaction autostart v1
+[Unit]
+Description=BBAI64 R5F presence and temperature
+RequiresMountsFor=/home/debian/interaction_demo
+PartOf=bbai64-interaction.target
+
+[Service]
+Type=exec
+User=root
+WorkingDirectory=/home/debian/interaction_demo/service-v1.5m70koqx
+Environment=PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+StandardInput=null
+StandardOutput=journal
+StandardError=journal
+KillSignal=SIGINT
+KillMode=mixed
+TimeoutStopSec=30
+SuccessExitStatus=130
+ExecStartPre=/usr/bin/python3 /home/debian/interaction_demo/service-v1.5m70koqx/service_support.py devices sensors
+ExecStart=/usr/bin/python3 -u /home/debian/interaction_demo/service-v1.5m70koqx/interaction_sensors.py /home/debian/hx711-mcu2_0.elf
+ExecStartPost=/usr/bin/python3 /home/debian/interaction_demo/service-v1.5m70koqx/service_support.py ready
+ExecReload=/usr/bin/python3 /home/debian/interaction_demo/service-v1.5m70koqx/service_support.py zero $MAINPID
+TimeoutStartSec=210
+Restart=no

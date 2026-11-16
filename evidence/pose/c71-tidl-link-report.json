@@ -1,0 +1,74 @@
+{
+  "firmware": "/home/fan/ti/bbai64-bringup/pose-mobilenetv2-v1/runtime/c71.02bz9bq0/c71-tidl-link-check.xe71",
+  "sha256": "bbada7613133f3a77858dc9f73f51df79dc067ee886b557751c343f8c802277b",
+  "api_compile_passed": true,
+  "tidl_link_passed": true,
+  "resource_table_address": 2819620864,
+  "segments": [
+    {
+      "start": 2819620864,
+      "end": 2819621016
+    },
+    {
+      "start": 2820669440,
+      "end": 2820669568
+    },
+    {
+      "start": 2822766592,
+      "end": 2822768704
+    },
+    {
+      "start": 2822782976,
+      "end": 2824523080
+    },
+    {
+      "start": 2824523776,
+      "end": 2824589320
+    },
+    {
+      "start": 2824593408,
+      "end": 2824593416
+    },
+    {
+      "start": 2824597504,
+      "end": 2824663048
+    },
+    {
+      "start": 2824667136,
+      "end": 2824667144
+    },
+    {
+      "start": 2824667144,
+      "end": 2824671240
+    },
+    {
+      "start": 2824732672,
+      "end": 2824863744
+    },
+    {
+      "start": 2824863744,
+      "end": 2827989120
+    },
+    {
+      "start": 2827993088,
+      "end": 2829263456
+    },
+    {
+      "start": 2829263456,
+      "end": 2829503336
+    },
+    {
+      "start": 2831155200,
+      "end": 2831157312
+    },
+    {
+      "start": 2833252352,
+      "end": 2833252416
+    }
+  ],
+  "fits_existing_c71_ddr": true,
+  "runtime_complete": false,
+  "model_loaded": false,
+  "hardware_verified": false,
+  "vector_slot_checked": true
+}

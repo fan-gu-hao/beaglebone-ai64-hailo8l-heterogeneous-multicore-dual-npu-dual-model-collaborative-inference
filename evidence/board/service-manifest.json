@@ -1,0 +1,29 @@
+{
+  "directory": "/home/debian/interaction_demo/service-v1.5m70koqx",
+  "originals": {
+    "interaction_app.py": "c9bd93b993f800442c0a49e71e7b193333924bc92ea779b85af1dcd03c59cd65",
+    "interaction_fusion.py": "d67390a886a2228304811a99552e458356f75fc1eed80289952a44067f0dc0aa",
+    "interaction_pose_app.py": "4a5271706ce015dca57173a9d9af323ba597460c5f391c4e886f7edf4aa46ece",
+    "interaction_pose_stable.py": "5de5009c870a758af61fab67feb4c46807e8156fab75d1066423f978ec6aa53c",
+    "interaction_actions.py": "a0f2b94b66b09c05b098c23f01db497edacab84cf5869cca90c995e10dcf45e9",
+    "c71_pose_client.py": "204d09c32f1990cb79d2444fd6f061fd183aeb71fd8cc2dc22b04e768a5cdf5c",
+    "interaction_sensors.py": "407386bba6c342cd5eff6e6588cdcb2d8b0552fbcf9aba209d595e9119741b96",
+    "interaction_sensor_io.py": "3c91785c3a4c48c5e000fabdb34449a508f2070de7acbeb65a0b6aaa06d206f4"
+  },
+  "generated": {
+    "interaction_fusion.py": "06e738cd4b26f2edfb05b2769097db3364180a5189ec56bf417fd58ec2af7531",
+    "interaction_actions.py": "64f5056d5f5a1492ee93522417fd7aeafb67273b836a89c6a242b04bf2ca6375",
+    "service_support.py": "163fb296ee197b71101a75bc5379683658aec7cab5ed7f06de6d522db096ffaa",
+    "interaction_pose_app.py": "751e763d9d8725450874b0d1d9eff74e2ce986951d0fe2c3dd222b610fc29e61",
+    "c71_pose_client.py": "6880e10a1a09cca0183a3e319341f538cd9a37449c80d536dc6213d87d8d2f74",
+    "interaction_pose_stable.py": "9ddd2b2a55d7e2d084514c880efd84a67a0ea8053cee28c07146477e5698f615",
+    "interaction_sensor_io.py": "88672e0a3ea578eba0e192cfa97794f1cee88ebac44adf1dcd1cb3db357c9af6",
+    "interaction_app.py": "7268752fbda8ec0b92ebc2c4774fc71540d4fbaafe558865ec3af7dcce67d67c",
+    "interaction_sensors.py": "5b5a9795878120c9b45ed12c2f4f25e687cd7c6b887f2e0104e34f4f01476e6d"
+  },
+  "units": [
+    "bbai64-interaction-sensors.service",
+    "bbai64-interaction-vision.service",
+    "bbai64-interaction.target"
+  ]
+}
