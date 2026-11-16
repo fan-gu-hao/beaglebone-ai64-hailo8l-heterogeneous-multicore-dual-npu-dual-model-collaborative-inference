@@ -1,8 +1,10 @@
 # BeagleBone AI-64 × Hailo-8L
 
+[繁體中文](README.md) | **English**
+
 ## Heterogeneous Multicore Embedded AI System with Dual-NPU, Dual-Model Cooperative Inference and Sensor Fusion
 
-[繁體中文](README.md) · [Architecture](docs/architecture.md) · [Model pipelines](docs/model-pipelines.md) · [Operations and reproduction](docs/operations.md) · [Validation](docs/validation.md) · [Development notes](docs/development-notes.md)
+[Architecture](docs/architecture.md) · [Model pipelines](docs/model-pipelines.md) · [Operations and reproduction](docs/operations.md) · [Validation](docs/validation.md) · [Development notes](docs/development-notes.md)
 
 An automatically started desktop interaction sensing system combining **Hailo-8L object detection, TI C71/MMA human pose estimation, R5F real-time load sensing and Linux infrared temperature acquisition**.
 

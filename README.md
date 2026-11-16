@@ -1,8 +1,10 @@
 # BeagleBone AI-64 × Hailo-8L
 
+**繁體中文** | [English](README.en.md)
+
 ## 異構多核心嵌入式 AI 系統：雙 NPU、雙模型協同推論與感測融合
 
-[English](README.en.md) · [系統架構](docs/architecture.md) · [模型轉換](docs/model-pipelines.md) · [操作與重建](docs/operations.md) · [實測與限制](docs/validation.md) · [開發紀錄](docs/development-notes.md)
+[系統架構](docs/architecture.md) · [模型轉換](docs/model-pipelines.md) · [操作與重建](docs/operations.md) · [實測與限制](docs/validation.md) · [開發紀錄](docs/development-notes.md)
 
 這個專案將 **Hailo-8L 物件偵測、TI C71／MMA 人體姿態、R5F 即時荷重感測與 Linux 紅外線測溫**整合為可開機自動運行的桌面互動感測台。
 
