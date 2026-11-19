@@ -2,13 +2,15 @@
 
 **繁體中文** | [English](README.en.md)
 
-## 異構多核心嵌入式 AI 系統：雙 NPU、雙模型協同推論與感測融合
+## 異質多核心嵌入式 AI 系統：雙 NPU、雙模型協同推論與感測融合
 
 [系統架構](docs/architecture.md) · [模型轉換](docs/model-pipelines.md) · [操作與重建](docs/operations.md) · [實測與限制](docs/validation.md) · [開發紀錄](docs/development-notes.md)
 
-這個專案將 **Hailo-8L 物件偵測、TI C71／MMA 人體姿態、R5F 即時荷重感測與 Linux 紅外線測溫**整合為可開機自動運行的桌面互動感測台。
+以 BeagleBone AI-64 為核心，將 **A72 Linux、Hailo-8L、TI C71／MMA 與 R5F** 組成具有明確運算分工的嵌入式 AI 系統。作品以桌面互動感測台呈現：攝影機辨識人物與物品、姿態模型追蹤人體關節、荷重感測判定物品放置與移除，並同步顯示紅外線表面溫度。
 
-Hailo 找到人物和物品，人物框引導 TI 姿態模型的裁切範圍；R5F 確認秤台是否承受物品，再由 Linux 結合物品類別、手腕接近線索與表面溫度，產生「放上／移走」事件。整個流程包含兩條由原始權重開始的模型轉換、遠端核心韌體、記憶體配置、跨核心通訊及常駐服務。
+**專案的核心工作是打通板級支援、模型部署、遠端核心韌體與 Linux 應用之間的整合路徑。** 從兩組預訓練權重的匯出、校正、量化與編譯，到 C71 推論服務、R5F 感測韌體、裝置樹保留記憶體、連結配置、快取管理與跨核心通訊，再將這些能力接成開機自動運行的系統服務。
+
+兩個模型具有前後相依的資料流：Hailo 的人物偵測框決定 TI 姿態模型的裁切區域，姿態輸出的手腕線索再與荷重變化、物品類別及時間資訊結合。系統同時處理非同步推論、座標還原、資料過期、遮擋與感測先於影像辨識完成等實際整合問題。
 
 **作者：范家豪（Fan Chia-Hao）**
 
@@ -17,26 +19,24 @@ Hailo 找到人物和物品，人物框引導 TI 姿態模型的裁切範圍；R
 ### 已完成的系統行為
 
 - 開機後，感測與影像兩個系統服務自動啟動，不依賴 SSH 終端機。
-- 網頁同時顯示物件框、人體骨架、秤台有無物品、紅外線視野表面溫度與最近事件。
+- 網頁同時顯示人物、瓶子、杯子與手機的偵測框、人體骨架、秤台有無物品、紅外線視野表面溫度與最近事件。
 - 物件偵測模型使用**自行匯出、校正、量化與編譯的 HEF**；姿態模型使用**自行轉換與量化的 TIDL 模型**。
 - 人物框、姿態裁切及關節投影有明確座標轉換；顯示骨架使用它所屬的同一張影像。
 - 透過人物追蹤、動態平滑、可信度遲滯與短暫保留改善骨架閃動；保留的舊關節不作為新的手腕接近證據。
 - 以荷重感測決定物品有無，影像輔助命名；遮擋時仍可記錄類別未確認的放置／移除事件。
 
-### 技術實作與程式入口
+### 運算單元與硬體分工
 
-| 實作範圍 | 本專案完成的工作 | 來源 |
+| 單元／硬體 | 負責工作 | 與系統的連接方式 |
 |---|---|---|
-| 異構多核心分工 | A72/Linux、Hailo-8L、C71/MMA、R5F 各自負責應用、偵測、姿態與感測 | [架構與資料流](docs/architecture.md) |
-| Hailo 完整模型轉換 | PyTorch → ONNX → HAR → 量化感知微調 → HEF；校驗各階段產物 | [Hailo 轉換程式](model-pipelines/hailo/) |
-| TI 完整模型轉換 | MMPose 權重 → ONNX → TI 浮點模擬 → INT8 校正 → 裝置圖編譯 | [TI 轉換程式](model-pipelines/pose/) |
-| C71 自訂推論服務 | 連結 TIDL／MMALIB、模型資產、記憶體分配、快取與張量間距處理 | [C71 服務](firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_service.c) |
-| 板級與記憶體整合 | 裝置樹保留 DDR／MSMC，設定連結區段、向量表與遠端核心資源表 | [記憶體配置](docs/architecture.md#記憶體與遠端核心--memory-and-remote-processors) |
-| 跨核心影像傳輸 | RPMsg 分塊傳圖、影像編號、位移檢查、CRC32 與關節回傳 | [韌體傳輸](firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_transport_v2.inc)／[Linux 客戶端](runtime/c71_pose_client.py) |
-| R5F 即時感測 | HX711 24 位元讀取、時脈脈衝保護、序號與計時檢查 | [HX711 韌體](firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/bb_hx711_v1.h) |
-| 多行程與多執行緒 | 獨立感測服務、Hailo C++ 行程、姿態工作執行緒、最新影格佇列與網頁服務 | [影像排程](runtime/interaction_pose_app.py)／[C++ 工作程式](native/hailo_worker.cpp) |
-| 姿態穩定與事件融合 | 人物延續追蹤、One Euro 平滑、關節狀態、手腕時間窗、物品分類延遲確認 | [姿態穩定](runtime/interaction_pose_stable.py)／[互動事件](runtime/interaction_actions.py)／[融合狀態機](runtime/interaction_fusion.py) |
-| 部署與維運 | 系統服務、裝置就緒檢查、開機歸零、訊號歸零、紀錄輪替與健康檢查 | [服務支援](runtime/service_support.py)／[自動啟動安裝器](bringup/board/install_interaction_boot.py) |
+| A72 雙核心／Linux | 攝影機擷取、影像前處理、模型協調、座標轉換、事件融合與網頁 | OpenCV、多行程／多執行緒、系統服務 |
+| Hailo-8L | 執行 YOLOv8n 物件偵測網路，產生人物與物品候選框 | PCIe、HailoRT 原生 C++ 工作行程 |
+| C71 DSP／MMA | C71 執行姿態服務、TIDL 執行環境與輸出解碼；MMA 加速模型運算 | 遠端處理器管理（remoteproc）、跨核心訊息（RPMsg） |
+| MAIN R5F／HX711 | 產生讀取時脈、擷取 24 位元荷重原始值，回報序號與計時資訊 | R5F 韌體直接操作 GPIO，再由 RPMsg 回傳 |
+| MLX90614 | 取得紅外線視野內的表面溫度 | Linux I2C 感測程式 |
+| USB 攝影機 C270 | 提供偵測與姿態模型共用的影像來源 | Linux 攝影機介面及穩定裝置識別路徑 |
+
+Linux 排程器管理 A72 上的應用工作；R5F 與 C71 執行各自載入的韌體。應用透過通訊協定協調不同核心，資料融合由 A72 完成。目前部署使用 MAIN R5F 與 C71；C66 不參與此應用，C71 啟動檢查也要求兩顆 C66 保持離線，以避免本配置的共享資源衝突。
 
 ### 協同推論資料流
 
@@ -46,7 +46,7 @@ flowchart TD
     Host --> Hailo["Hailo-8L：YOLOv8n"]
     Hailo --> Crop["人物框引導裁切"]
     Crop --> TI["C71 + MMA：MobileNetV2 姿態"]
-    Hailo --> Fusion["時間與狀態融合"]
+    Hailo --> Fusion["A72：時間與狀態融合"]
     TI --> Smooth["同一人物追蹤與關節平滑"]
     Smooth --> Fusion
     Load["HX711：R5F 即時取樣"] --> Fusion
@@ -54,22 +54,63 @@ flowchart TD
     Fusion --> Web["網頁與事件紀錄"]
 ```
 
-兩個模型之間具有實際資料依賴：YOLOv8n 的人物框決定姿態輸入；姿態的手腕資訊再參與事件描述。荷重、影像與姿態各自保留有效性與時間資訊。
+### 板級支援與 C71 推論韌體
 
-### 已觀察到的實測結果
+**讓模型在 C71／MMA 執行，需要同時完成 Linux 與遠端韌體兩側的記憶體配置。** 本專案整合 TI 平台開發套件（PDK）、SYS/BIOS、深度學習執行環境（TIDL）與矩陣加速函式庫（MMALIB），建立可由 Linux 啟動及呼叫的姿態服務。
 
-| 項目 | 結果 | 測量範圍 |
+- **記憶體所有權：** 以裝置樹（Device Tree）保留額外 128 MiB DDR，核對它已排除於 Linux 一般記憶體，並確認 C71 的 `memory-region` 實際引用該區域；片上共享記憶體（MSMC SRAM）另保留給推論使用。
+- **韌體配置：** 協調連結器區段、16 KiB 向量表保留槽、模型資產與 96 MiB TIDL 堆積區（heap），並使資源表、快取與記憶體管理單元（MMU）設定相互一致。
+- **推論執行環境：** 依 TIDL 的記憶體需求分配不同區域，串接初始化、模型執行與輸出擷取；處理 SDK 所需的 DMA、事件路由與快取設定。
+- **張量布局：** 核對姿態模型介面的尺寸、型別、填補與資料間距（pitch），依該模型布局在應用的緊密排列影像與 TIDL 緩衝區之間搬移資料，再從輸出熱圖解出關節。
+- **啟動檢查：** 按硬體名稱 `64800000.dsp` 尋找 C71，核對韌體雜湊、模型版本、通訊協定及目前核心狀態，避免依賴會隨開機變動的 `remoteprocN` 編號。
+
+實作入口：[C71 推論服務](firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_service.c)、[連結配置](firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/j721e/linker_c7x_c7x_1_sysbios.lds)、[Linux 啟動與記憶體核對](runtime/c71_pose_client.py)。配置關係與位址見[系統架構](docs/architecture.md#記憶體與遠端核心--memory-and-remote-processors)。
+
+### 跨核心影像傳輸與結果回傳
+
+Linux 與 C71 之間使用自訂 `C71_TIDL_POSE_V2` 協定。一張姿態輸入為 192 × 256 RGB、通道優先排列（CHW）、8 位元無號整數，共 147,456 位元組；客戶端將影像切成每塊最多 240 位元組的影像資料，再加上識別標頭以 RPMsg 傳送。
+
+1. **建立影像交易：** 傳送影格編號、總長度與整張影像 CRC32。
+2. **逐塊傳入：** 每塊附帶影格編號與位移，接收端檢查位置；客戶端核對確認封包的下一個位移。
+3. **完整性檢查後推論：** 接收端確認資料收齊及 CRC32 相符，才執行該影格的模型請求。
+4. **回傳對應結果：** 即時路徑取得 17 個關節的位置與分數；診斷路徑可讀回完整熱圖。客戶端再次核對影格編號與結果格式。
+
+這讓外部攝影機影像可以持續送入 C71，並能區分傳輸錯誤、影格混用與模型輸出問題。傳輸遇到逾時會回報錯誤，避免盲目重送已可能執行的請求。
+
+實作入口：[C71 傳輸處理](firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_transport_v2.inc)、[Linux 客戶端](runtime/c71_pose_client.py)。
+
+### 非同步影像處理與座標一致性
+
+兩個模型使用不同輸入尺寸，且推論與攝影機擷取各有執行節奏。應用將**工作排程、影格身分與座標轉換一起管理**：
+
+- 攝影機影像先等比例縮放並補邊（letterbox）為 Hailo 的 640 × 640 RGB 輸入，保留縮放與邊界資訊。
+- 人物框經寬高比調整與仿射變換（affine transform）產生 192 × 256 姿態裁切；關節結果經反向變換還原到原始影像。
+- Hailo 使用原生 C++ 子行程，Python 透過影像輸入與 JSON 結果介面協調；姿態則由專用工作執行緒呼叫 C71。
+- 姿態工作佇列只保留**最新一筆待處理工作**，並丟棄過期工作，避免推論較慢時持續累積舊影像。
+- 已送出的工作保留自己的影像、人物框與轉換參數；完成後將骨架畫在對應影像上，避免把上一張的關節套到下一張。
+- 使用單調時間（monotonic time）、感測程序身分與關注區域（ROI）版本判斷資料有效性；服務重啟或區域變更後，舊資料不直接延續成新的事件證據。
+
+實作入口：[影像與姿態排程](runtime/interaction_pose_app.py)、[Hailo C++ 工作程式](native/hailo_worker.cpp)、[時序融合](runtime/interaction_fusion.py)。
+
+### 即時感測、姿態穩定與互動事件
+
+**HX711 的讀取時序由 R5F 負責，Linux 負責資料解讀與事件管理。** R5F 韌體在時脈高電位的臨界區暫時關閉中斷，避免高電位被中斷服務拉長；同時檢查脈衝持續時間，並以有界等待處理資料未就緒。回覆包含原始值、序號與遠端計時資訊，Linux 端再檢查新鮮度與狀態，將原始計數轉成物品有無。
+
+事件判定結合三種不同語意的資訊：
+
+| 資訊 | 系統中的用途 | 對應處理 |
 |---|---|---|
-| 整合展示 | 約 **9.7～10.1 張／秒** | 攝影機、兩個模型、繪圖與網頁更新的展示紀錄 |
-| Hailo 獨立串流測試 | **139.45 張／秒**；5 秒內 702 張 | `hailortcli run`；不等同整套應用速度 |
-| C71 外部傳圖 | 約 **38 毫秒** | 一張 147,456 位元組 RGB／CHW 輸入的傳輸 |
-| C71 推論請求往返 | 約 **7.6～7.7 毫秒** | 外部傳圖測試；包含通訊與服務開銷，不是純 MMA 核心時間 |
-| C71 與 TI 主機模擬 | 最大絕對差 **5.96 × 10⁻⁸** | 一張參考影像的 52,224 個反量化輸出；17 個熱圖峰值位置相同 |
-| 重開機驗證 | 兩個服務啟用、R5F／C71 運行、感測有效、影格更新 | [來源中的開機健康紀錄](evidence/board/boot-validation.json) |
+| 荷重變化 | 判斷秤台從空到有、從有到空 | 中位數、進出不同門檻的遲滯與連續確認 |
+| 物件偵測 | 為已發生的放置／移除事件補上物品類別 | 秤台 ROI、單一候選、跨影格類別穩定與延遲確認 |
+| 人體關節 | 補充事件附近是否出現手腕接近線索 | 人物框交並比（IoU）追蹤、一歐元濾波器（One Euro Filter）、關節可信度狀態與事件時間窗 |
 
-以上為這台設備與這次模型版本的結果。數值一致性測試不是人體關節真值準確度；完整比較與證據來源見[實測文件](docs/validation.md)。
+荷重先改變、影像稍後才辨識到物品時，狀態機保留短暫分類等待期；證據不足就保留「類別未確認」事件。姿態顯示允許短暫保留關節來減少閃動，但**保留的舊關節不能產生新的手腕接近證據**，使顯示平滑與事件判斷具有不同的有效性條件。
+
+實作入口：[R5F HX711 韌體](firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/bb_hx711_v1.h)、[感測服務](runtime/interaction_sensors.py)、[姿態穩定](runtime/interaction_pose_stable.py)、[事件融合狀態機](runtime/interaction_fusion.py)、[互動事件](runtime/interaction_actions.py)。
 
 ### 兩條模型路徑
+
+兩個模型分別使用各自的工具鏈建立部署產物。專案程式負責資料準備、階段串接、設定與產物核對，模型最佳化與裝置編譯使用 Hailo／TI 提供的工具。
 
 | | Hailo-8L 物件偵測 | TI C71／MMA 人體姿態 |
 |---|---|---|
@@ -78,11 +119,46 @@ flowchart TD
 | 輸入 | 640 × 640 RGB | 192 × 256 RGB 人物裁切 |
 | 校正／驗證 | 1,024／128 張實拍影像 | 64／32 張人物裁切，沿用分離的校正／驗證來源 |
 | 轉換工具 | Hailo 資料流編譯器 3.33.1 | TIDL 08.00.00.10 |
-| 最佳化 | INT8 校正、4 輪量化感知微調 | INT8 參數／特徵量化與校正 |
+| 最佳化 | INT8 校正、4 輪量化感知微調 | INT8 參數／特徵量化、10 次偏差校正迭代 |
 | 部署產物 | `yolov8n_custom_hailo8l.hef` | TIDL 網路／介面 `.bin`，再與服務連結為 `.xe71` |
 | 執行介面 | HailoRT 4.23.0 C++ | TIDL／MMALIB + Linux RPMsg 客戶端 |
 
-這次使用的是預訓練類別；量化微調用於降低數值轉換誤差，沒有另行訓練新的物品類別。Hailo 的偵測後處理以 HEF 描述並由所選的 HailoRT CPU 後處理執行，不能將整個後處理計入 NPU 運算。
+**Hailo 路徑：** 匯出 ONNX 後指定 YOLO 的六個偵測輸出頭，建立 Hailo 封存表示（HAR），以模型腳本配置正規化、分數轉換及非極大值抑制（NMS），完成校正與量化感知微調後編譯為 HEF。板端使用 UINT8 影像介面，前處理與模型內正規化保持一致。
+
+**TI 路徑：** 先核對 ONNX 與 TI 浮點主機模擬，再以人物裁切資料完成 INT8 校正與目標圖編譯。部署時將網路與介面描述轉成韌體可使用的模型資產，使用 C7x 工具鏈將 TIDL、MMALIB 與姿態服務連結成韌體，並依輸出描述解碼熱圖。
+
+這次使用的是預訓練類別；量化微調用於降低數值轉換誤差，沒有另行訓練新的物品類別。Hailo 的偵測後處理以 HEF 描述並由所選的 HailoRT CPU 後處理執行。完整流程見[模型轉換文件](docs/model-pipelines.md)。
+
+### 從原型到常駐服務的整合處理
+
+| 整合問題 | 本專案採用的處理 |
+|---|---|
+| 遠端核心與周邊的 Linux 編號可能變動 | 依硬體名稱、裝置樹控制器與穩定裝置路徑尋找核心、I2C 與攝影機 |
+| C71 模型需要額外記憶體與不同張量布局 | 對齊裝置樹、連結配置、資源表、快取與 TIDL 介面描述，啟動前查核實際配置 |
+| 內嵌測試影像不足以代表即時應用 | 增加外部影像分塊上傳與完整性檢查，保留原圖／翻轉／恢復原圖的驗證路徑 |
+| 非同步姿態可能造成影格錯配及顯示延遲 | 最新待處理工作、工作過期檢查、同影格繪圖及反向座標投影 |
+| 人物切換、關節閃動與遮擋 | 人物延續追蹤、動態平滑、可信度遲滯與有限時間保留 |
+| 感測事件先於類別辨識，或舊關節造成誤解 | 分類延遲確認、未確認類別保留、手腕新鮮度與事件時間窗檢查 |
+| 手動啟動流程難以維護，遠端核心重啟有狀態限制 | 拆成感測與影像服務，加入裝置就緒、開機歸零、受控重新連接及健康檢查 |
+
+感測與影像分為兩個系統服務（systemd），各自保留執行紀錄；感測服務支援不停止 R5F 的重新歸零，影像服務使用受限重試，C71 客戶端結束時保持韌體運行以供後續重新連接。健康檢查同時觀察服務、遠端核心、感測有效性與影格是否持續更新。
+
+整合過程與原因見[開發紀錄](docs/development-notes.md)；測試方法與原始證據集中於[驗證文件](docs/validation.md)。
+
+### 技術實作與程式入口
+
+| 實作範圍 | 本專案完成的工作 | 來源 |
+|---|---|---|
+| 異質多核心分工 | A72/Linux、Hailo-8L、C71/MMA、R5F 各自負責應用、偵測、姿態與感測 | [架構與資料流](docs/architecture.md) |
+| Hailo 完整模型轉換 | PyTorch → ONNX → HAR → 量化感知微調 → HEF；校驗各階段產物 | [Hailo 轉換程式](model-pipelines/hailo/) |
+| TI 完整模型轉換 | MMPose 權重 → ONNX → TI 浮點模擬 → INT8 校正 → 裝置圖編譯 | [TI 轉換程式](model-pipelines/pose/) |
+| C71 自訂推論服務 | 連結 TIDL／MMALIB、模型資產、記憶體分配、快取與張量間距處理 | [C71 服務](firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_service.c) |
+| 板級與記憶體整合 | 裝置樹保留 DDR／MSMC，設定連結區段、向量表與遠端核心資源表 | [記憶體配置](docs/architecture.md#記憶體與遠端核心--memory-and-remote-processors) |
+| 跨核心影像傳輸 | RPMsg 分塊傳圖、影像編號、位移檢查、CRC32 與關節回傳 | [韌體傳輸](firmware/c71/pdk-overrides/ti/drv/ipc/examples/common/src/bb_pose_transport_v2.inc)／[Linux 客戶端](runtime/c71_pose_client.py) |
+| R5F 即時感測 | HX711 24 位元讀取、時脈脈衝保護、序號與計時檢查 | [HX711 韌體](firmware/r5f/pdk-overrides/ti/drv/ipc/examples/common/src/bb_hx711_v1.h) |
+| 多行程與多執行緒 | 獨立感測服務、Hailo C++ 行程、姿態工作執行緒、最新影格佇列與網頁服務 | [影像排程](runtime/interaction_pose_app.py)／[C++ 工作程式](native/hailo_worker.cpp) |
+| 姿態穩定與事件融合 | 人物延續追蹤、動態濾波、關節狀態、手腕時間窗、物品分類延遲確認 | [姿態穩定](runtime/interaction_pose_stable.py)／[互動事件](runtime/interaction_actions.py)／[融合狀態機](runtime/interaction_fusion.py) |
+| 部署與維運 | 系統服務、裝置就緒檢查、開機歸零、訊號歸零、紀錄輪替與健康檢查 | [服務支援](runtime/service_support.py)／[自動啟動安裝器](bringup/board/install_interaction_boot.py) |
 
 ### 在已完成部署的板子操作
 
