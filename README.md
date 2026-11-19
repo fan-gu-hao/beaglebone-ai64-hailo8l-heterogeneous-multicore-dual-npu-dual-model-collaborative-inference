@@ -2,6 +2,37 @@
 
 **繁體中文** | [English](README.en.md)
 
+## 技術關鍵字
+
+涵蓋本專案的板端整合、主機模型轉換、並行處理、感測融合、部署與驗證。
+
+| 技術領域 | 關鍵字 |
+|---|---|
+| **系統架構** | 嵌入式人工智慧（Embedded AI）、邊緣人工智慧（Edge AI）、異質多核心運算（Heterogeneous Multicore Computing）、雙加速器協同推論（Dual-Accelerator Cooperative Inference）、雙模型串接（Cascaded Models）、軟硬體協作（Hardware–Software Integration）、多感測器融合（Sensor Fusion） |
+| **硬體與運算平台** | BeagleBone AI-64、TI J721E／TDA4VM、Arm Cortex-A72、Arm Cortex-R5F、TI C71／C7x 數位訊號處理器（DSP）、矩陣乘法加速器（MMA）、Hailo-8L 神經網路處理器（NPU）、PCIe |
+| **程式語言與建置** | C、C++17、Python 3、Bash、GNU Make、交叉編譯（Cross-Compilation）、TI ARM／C7000 編譯器、XDCtools |
+| **作業系統與開發套件** | 嵌入式 Linux（Embedded Linux）、Debian 12、即時作業系統（RTOS）、R5F FreeRTOS、C71 SYS/BIOS、TI Processor SDK RTOS、平台開發套件（PDK）、作業系統抽象層（OSAL）、晶片支援函式庫（CSL） |
+| **板級與開機整合** | 板級支援整合（BSP Integration）、裝置樹（Device Tree／DTS／DTB）、保留記憶體（reserved-memory）、extlinux 開機設定、腳位多工（Pin Multiplexing／pinmux）、GPIO 控制器與腳位偏移、裝置識別與資源所有權 |
+| **遠端核心與跨核心通訊** | 遠端處理器管理（remoteproc）、跨核心通訊（IPC）、遠端處理器訊息（RPMsg）、VirtIO、虛擬佇列（virtqueue／vring）、遠端核心資源表（Resource Table）、RPMsg 字元裝置（rpmsg_char／rpmsg_ctrl）、端點生命週期（Endpoint Lifecycle） |
+| **Linux 裝置介面與診斷** | sysfs、debugfs、/proc/iomem、裝置控制呼叫（ioctl）、核心模組載入（modprobe）、非阻塞輸入輸出（Nonblocking I/O）、輸入輸出多工（select）、遠端韌體追蹤緩衝區（Trace Buffer） |
+| **記憶體與韌體配置** | DDR、片上共享記憶體（MSMC SRAM）、記憶體映射輸入輸出（MMIO）、記憶體管理單元（MMU）、記憶體保護單元（MPU）、連結器腳本（Linker Script）、ELF 區段與對齊、向量表（Vector Table）、記憶體池（Memory Pool）、堆積區（Heap）、快取配置／寫回／失效（Cache Configuration／Writeback／Invalidate） |
+| **加速器執行環境整合** | TI 深度學習執行環境（TIDL）、矩陣加速函式庫（MMALIB）、IALG／IVISION 介面、演算法記憶體配置／初始化／執行（algAlloc／algInit／algProcess）、統一直接記憶體存取（UDMA）整合、運算叢集事件控制器（CLEC）、事件路由（Event Routing） |
+| **周邊與感測介面** | GPIO、libgpiod、I2C、系統管理匯流排（SMBus）、封包錯誤檢查（PEC）、i2c-dev、i2c-tools／i2cget、HX711、荷重元（Load Cell）、MLX90614、紅外線表面測溫、USB 攝影機 C270 |
+| **感測韌體與時序控制** | GPIO 軟體時序控制（Bit-banging）、24 位元有號取樣、臨界區（Critical Section）、中斷遮蔽與還原（Interrupt Masking/Restore）、微秒計時（Microsecond Timing）、有界等待（Bounded Wait）、取樣序號與時間戳記、歸零（Tare） |
+| **模型與推論功能** | YOLOv8n、MobileNetV2、COCO 預訓練模型、物件偵測（Object Detection）、人體姿態估測（Human Pose Estimation）、人物框引導姿態推論、17 關節骨架、關節熱圖（Keypoint Heatmaps）、熱圖峰值解碼 |
+| **模型框架與主機最佳化** | Ultralytics、PyTorch、MMPose、MMCV、ONNX、ONNX Runtime、TensorFlow、CUDA／GPU 輔助模型最佳化（筆電端） |
+| **Hailo 模型工具鏈** | Hailo 資料流編譯器（DFC）、Hailo SDK ClientRunner、HAR、HEF、HailoRT、虛擬裝置（VDevice）、虛擬串流（VStreams／InferVStreams）、偵測頭解析（Detection Head Parsing）、硬體資源映射（Hardware Mapping）、執行脈絡（Execution Contexts） |
+| **TI 模型轉換與部署** | 模型匯入（Model Import）、浮點主機模擬（Host Emulation）、目標圖編譯（Target Graph Compilation）、資料流配置（Dataflow Mapping）、tidl_model_import、PC_dsp_test_dl_algo、ti_cnnperfsim、模型輸入／輸出描述（IO Descriptors）、模型資產與韌體連結 |
+| **量化與數值驗證** | FP32、INT8、UINT8、ONNX 匯出、校正（Calibration）、量化感知微調（Quantization-Aware Fine-Tuning）、蒸餾損失（Distillation Loss）、偏差校正（Bias Calibration）、量化雜訊分析、量化縮放／反量化（Quantization Scale／Dequantization）、校正與驗證資料分離、轉換前後數值比對 |
+| **影像與張量前後處理** | OpenCV、NumPy、V4L2、YUYV、BGR／RGB 色彩轉換、正規化（Normalization）、等比例縮放與補邊（Letterbox）、仿射裁切（Affine Crop）、反向座標投影（Inverse Projection）、關注區域（ROI）、NHWC／CHW、張量填補與間距（Tensor Padding／Pitch）、Sigmoid、非極大值抑制（NMS；HailoRT CPU 路徑） |
+| **並行處理與行程通訊** | 多行程（Multiprocessing）、多執行緒（Multithreading）、非同步推論（Asynchronous Inference）、Python 子行程（Subprocess）、原生 C++ 工作行程、標準輸入／輸出管線（stdin/stdout Pipes）、固定長度影像封包、逐行 JSON、互斥鎖（Lock）、條件變數（Condition Variable）、最新待處理影格（Latest Pending Frame） |
+| **傳輸協定與資料完整性** | 自訂請求／回覆協定（Request–Response Protocol）、二進位封包（Binary Protocol）、小端序（Little-Endian）、分塊影像傳輸（Chunked Transfer）、影格編號（Frame ID）、位移核對（Offset Validation）、確認回覆（Acknowledgment）、CRC32、逾時處理（Timeout Handling）、SHA256、韌體／模型版本核對 |
+| **資料生命週期與一致性** | 單調時鐘（Monotonic Clock）、資料新鮮度（Freshness）、過期資料排除、開機／程序身分（Boot ID／Run ID）、ROI 修訂版本、同影格繪圖、檔案鎖（flock）、原子檔案更新（Atomic Replace） |
+| **姿態穩定與事件融合** | 交並比（IoU）、單人延續追蹤（Person Tracking）、一歐元濾波器（One Euro Filter）、可信度遲滯（Confidence Hysteresis）、關節短暫保留（Joint Hold）、離群值處理（Outlier Handling）、重新確認（Reacquisition）、中位數濾波（Median Filter）、去抖與連續確認、事件時間窗（Event Window）、延遲分類確認、融合狀態機（Fusion State Machine） |
+| **網頁介面與資料格式** | HTTP、JSON、HTML、CSS、JavaScript、Canvas、Fetch API、HTTP 輪詢（Polling）、JPEG 編碼、Base64、互動式 ROI 設定、瀏覽器事件顯示 |
+| **系統部署與維運** | systemd Service／Target、開機自動啟動、裝置就緒檢查（Readiness Checks）、服務健康檢查（Health Checks）、SIGUSR1 訊號、不中斷韌體的重新歸零、有限次重試、JSONL 紀錄、紀錄輪替（Log Rotation）、journalctl、版本化部署 |
+| **來源管理與自動驗證** | Git／GitHub、GitHub Actions、持續整合（CI）、Python unittest、時序回歸測試（Temporal Regression Tests）、模擬時鐘（Fake Clock）、抽象語法樹（AST）隔離測試、來源完整性檢查、產物清單（Artifact Manifest）、語法檢查、文件連結檢查 |
+
 ## 異質多核心嵌入式 AI 系統：雙 NPU、雙模型協同推論與感測融合
 
 [系統架構](docs/architecture.md) · [模型轉換](docs/model-pipelines.md) · [操作與重建](docs/operations.md) · [實測與限制](docs/validation.md) · [開發紀錄](docs/development-notes.md)

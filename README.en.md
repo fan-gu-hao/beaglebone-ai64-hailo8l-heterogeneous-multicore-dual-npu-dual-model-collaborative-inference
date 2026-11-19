@@ -2,6 +2,37 @@
 
 [繁體中文](README.md) | **English**
 
+## Technical keywords
+
+Technologies used in board integration, host-side model conversion, concurrent processing, sensor fusion, deployment and validation.
+
+| Area | Keywords |
+|---|---|
+| **System architecture** | Embedded AI, Edge AI, Heterogeneous Multicore Computing, Dual-Accelerator Cooperative Inference, Cascaded Models, Hardware–Software Integration, Sensor Fusion |
+| **Hardware and compute** | BeagleBone AI-64, TI J721E/TDA4VM, Arm Cortex-A72, Arm Cortex-R5F, TI C71/C7x DSP, Matrix Multiplication Accelerator (MMA), Hailo-8L NPU, PCIe |
+| **Languages and build tools** | C, C++17, Python 3, Bash, GNU Make, Cross-Compilation, TI ARM/C7000 Compilers, XDCtools |
+| **Operating systems and SDKs** | Embedded Linux, Debian 12, Real-Time Operating Systems (RTOS), FreeRTOS on R5F, SYS/BIOS on C71, TI Processor SDK RTOS, Platform Development Kit (PDK), OS Abstraction Layer (OSAL), Chip Support Library (CSL) |
+| **Board support and boot configuration** | BSP Integration, Device Tree/DTS/DTB, reserved-memory, extlinux Boot Configuration, Pin Multiplexing/pinmux, GPIO Controllers and Line Offsets, Device Identity and Resource Ownership |
+| **Remote processors and interprocessor communication** | remoteproc, Interprocessor Communication (IPC), RPMsg, VirtIO, virtqueue/vring, Remote-Processor Resource Tables, rpmsg_char/rpmsg_ctrl, Endpoint Lifecycle |
+| **Linux device interfaces and diagnostics** | sysfs, debugfs, /proc/iomem, ioctl, modprobe, Nonblocking I/O, I/O Multiplexing with select, Remote Firmware Trace Buffers |
+| **Memory and firmware layout** | DDR, MSMC SRAM, Memory-Mapped I/O (MMIO), MMU, MPU, Linker Scripts, ELF Sections and Alignment, Vector Tables, Memory Pools, Heaps, Cache Configuration/Writeback/Invalidate |
+| **Accelerator runtime integration** | TIDL, MMALIB, IALG/IVISION Interfaces, algAlloc/algInit/algProcess, Unified DMA (UDMA) Integration, Compute Cluster Event Controller (CLEC), Event Routing |
+| **Peripherals and sensor interfaces** | GPIO, libgpiod, I2C, SMBus, Packet Error Checking (PEC), i2c-dev, i2c-tools/i2cget, HX711, Load Cell, MLX90614, Infrared Surface Temperature Sensing, C270 USB Camera |
+| **Sensor firmware and timing** | GPIO Bit-banging, Signed 24-bit Sampling, Critical Sections, Interrupt Masking/Restore, Microsecond Timing, Bounded Waits, Sample Sequence Numbers and Timestamps, Tare |
+| **Models and inference tasks** | YOLOv8n, MobileNetV2, COCO Pretrained Models, Object Detection, Human Pose Estimation, Person-Guided Pose Inference, 17-Keypoint Skeletons, Keypoint Heatmaps, Heatmap Peak Decoding |
+| **Model frameworks and host optimization** | Ultralytics, PyTorch, MMPose, MMCV, ONNX, ONNX Runtime, TensorFlow, CUDA/GPU-Assisted Model Optimization on the Host Laptop |
+| **Hailo model toolchain** | Hailo Dataflow Compiler (DFC), Hailo SDK ClientRunner, HAR, HEF, HailoRT, VDevice, VStreams/InferVStreams, Detection Head Parsing, Hardware Mapping, Execution Contexts |
+| **TI model conversion and deployment** | Model Import, Floating-Point Host Emulation, Target Graph Compilation, Dataflow Mapping, tidl_model_import, PC_dsp_test_dl_algo, ti_cnnperfsim, Model IO Descriptors, Model Asset and Firmware Linking |
+| **Quantization and numerical validation** | FP32, INT8, UINT8, ONNX Export, Calibration, Quantization-Aware Fine-Tuning, Distillation Loss, Bias Calibration, Quantization Noise Analysis, Quantization Scale/Dequantization, Separate Calibration and Validation Splits, Numerical Conversion Comparison |
+| **Image and tensor processing** | OpenCV, NumPy, V4L2, YUYV, BGR/RGB Conversion, Normalization, Letterbox, Affine Crops, Inverse Coordinate Projection, ROI, NHWC/CHW, Tensor Padding/Pitch, Sigmoid, NMS through the HailoRT CPU Path |
+| **Concurrency and process communication** | Multiprocessing, Multithreading, Asynchronous Inference, Python Subprocesses, Native C++ Workers, stdin/stdout Pipes, Fixed-Length Image Packets, Line-Delimited JSON, Locks, Condition Variables, Latest Pending Frame |
+| **Transport protocols and integrity** | Custom Request–Response Protocols, Binary Protocols, Little-Endian Encoding, Chunked Image Transfer, Frame IDs, Offset Validation, Acknowledgments, CRC32, Timeout Handling, SHA256, Firmware/Model Identity Checks |
+| **Data lifecycle and consistency** | Monotonic Clocks, Data Freshness, Stale-Data Rejection, Boot ID/Run ID, ROI Revisions, Same-Frame Overlays, File Locks with flock, Atomic File Replacement |
+| **Pose stability and event fusion** | IoU, Person Tracking, One Euro Filter, Confidence Hysteresis, Joint Holds, Outlier Handling, Reacquisition, Median Filtering, Debouncing and Consecutive Confirmation, Event Windows, Delayed Class Confirmation, Fusion State Machines |
+| **Web interface and data formats** | HTTP, JSON, HTML, CSS, JavaScript, Canvas, Fetch API, HTTP Polling, JPEG Encoding, Base64, Interactive ROI Selection, Browser Event Display |
+| **Deployment and operations** | systemd Services/Targets, Automatic Boot Startup, Device Readiness Checks, Health Checks, SIGUSR1, Re-Tare without Firmware Restart, Bounded Retries, JSONL Logs, Log Rotation, journalctl, Versioned Deployment |
+| **Source management and automated checks** | Git/GitHub, GitHub Actions, Continuous Integration (CI), Python unittest, Temporal Regression Tests, Fake Clocks, AST-Based Test Isolation, Source Integrity Checks, Artifact Manifests, Syntax Checks, Document Link Checks |
+
 ## Heterogeneous Multicore Embedded AI System with Dual-NPU, Dual-Model Cooperative Inference and Sensor Fusion
 
 [Architecture](docs/architecture.md) · [Model pipelines](docs/model-pipelines.md) · [Operations and reproduction](docs/operations.md) · [Validation](docs/validation.md) · [Development notes](docs/development-notes.md)
