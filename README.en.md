@@ -123,7 +123,32 @@ Each model uses its own toolchain to produce deployment artifacts. Project scrip
 | Deployment | `yolov8n_custom_hailo8l.hef` | TIDL network/IO `.bin` linked into `.xe71` service firmware |
 | Runtime | HailoRT 4.23.0 C++ | TIDL/MMALIB and Linux RPMsg client |
 
+#### Hailo-8L object detection conversion flow
+
+| Stage | File | API or tool | Operation |
+|---|---|---|---|
+| Checkpoint | `yolov8n.pt` | Ultralytics `YOLO`, PyTorch | Load the pretrained model |
+| Export | `yolov8n.onnx` | `YOLO.export`, ONNX, ONNX Runtime | Export an FP32, opset 11 model with static input and compare numerically with PyTorch |
+| Parse | `yolov8n_hailo8l.parsed.har` | `hailo_sdk_client.ClientRunner.translate_onnx_model`, `save_har` | Extract six detection branches and convert them into Hailo's network representation |
+| Native optimization | `yolov8n_hailo8l.fp.har` | `load_model_script`, `optimize_full_precision` | Configure normalization, score branches and non-maximum suppression (NMS) |
+| Quantization and fine-tuning | `yolov8n_hailo8l.quantized.har` | `ClientRunner.optimize` | Calibrate quantization ranges, perform quantization-aware fine-tuning and analyze noise |
+| Hardware compilation | `yolov8n_custom_hailo8l.hef` | `ClientRunner.compile` | Allocate Hailo-8L resources and compile three execution contexts |
+| Board inference | HEF | HailoRT C++ `Hef`, `VDevice`, `InferVStreams` | Load the model, stream inputs, run inference and perform detection postprocessing |
+
 **Hailo pipeline:** Export ONNX, identify YOLO's six detection heads and create the Hailo Archive (HAR). Configure normalization, score transforms and non-maximum suppression (NMS) in the model script, then calibrate, fine-tune for quantization and compile the HEF. The board supplies UINT8 images, with preprocessing kept consistent with model-side normalization.
+
+#### TI C71/MMA human pose conversion flow
+
+| Stage | Artifact | Tool |
+|---|---|---|
+| Original model | `mobilenetv2_coco_256x192-d1e58e7b_20200727.pth` | MMPose 0.29.0, MMCV, PyTorch |
+| Export | `mobilenetv2_pose_256x192.fp32.onnx` | PyTorch ONNX export and ONNX Runtime comparison |
+| FP32 validation | TI floating-point network and outputs | `tidl_model_import.out`, `PC_dsp_test_dl_algo.out` |
+| Calibration | 64 calibration person crops and 32 validation person crops | YOLO person boxes and MMPose-compatible affine crops |
+| INT8 import | TIDL network `.bin` and input/output descriptor `.bin` | `tidl_model_import.out`, calibration and graph compilation |
+| Target mapping | Dataflow configuration within the network | `ti_cnnperfsim.out` |
+| Firmware linking | `c71-pose-v2.xe71` | TI C7000 compiler, PDK IPC, SYS/BIOS, TIDL, MMALIB |
+| Runtime | 17 keypoints | C71 service, MMA, RPMsg client |
 
 **TI pipeline:** Check the ONNX model and TI floating-point host emulation, then use person crops for INT8 calibration and target graph compilation. Convert network and IO descriptions into firmware assets, use the C7x toolchain to link TIDL, MMALIB and the pose service into firmware, and decode heatmaps according to the output descriptors.
 
@@ -211,4 +236,4 @@ This release preserves **auditable implementation sources and a validated deploy
 - The application tracks one person and handles one platform object at a time. Occlusion, leaving the frame or low confidence can remove visible joints.
 - The unauthenticated browser interface is intended for a trusted local demonstration network; it has no public-network deployment configuration.
 
-[Third-party notices](THIRD_PARTY_NOTICES.md) · [Demonstration recording plan](docs/demo-recording.md)
+[Third-party notices](THIRD_PARTY_NOTICES.md)

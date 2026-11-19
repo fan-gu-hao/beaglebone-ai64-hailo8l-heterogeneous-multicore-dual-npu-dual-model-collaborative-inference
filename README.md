@@ -123,7 +123,32 @@ Linux 與 C71 之間使用自訂 `C71_TIDL_POSE_V2` 協定。一張姿態輸入�
 | 部署產物 | `yolov8n_custom_hailo8l.hef` | TIDL 網路／介面 `.bin`，再與服務連結為 `.xe71` |
 | 執行介面 | HailoRT 4.23.0 C++ | TIDL／MMALIB + Linux RPMsg 客戶端 |
 
+#### Hailo-8L：物件偵測轉換流程
+
+| 階段 | 檔案 | 使用介面／工具 | 工作 |
+|---|---|---|---|
+| 原始權重 | `yolov8n.pt` | Ultralytics `YOLO`、PyTorch | 載入預訓練模型 |
+| 通用圖匯出 | `yolov8n.onnx` | `YOLO.export`、ONNX、ONNX Runtime | 匯出 FP32、opset 11、靜態輸入模型，並與 PyTorch 比對 |
+| 解析 | `yolov8n_hailo8l.parsed.har` | `hailo_sdk_client.ClientRunner.translate_onnx_model`、`save_har` | 擷取六個偵測分支，轉成 Hailo 網路表示 |
+| 浮點設定 | `yolov8n_hailo8l.fp.har` | `load_model_script`、`optimize_full_precision` | 載入正規化、分數分支與非極大值抑制（NMS）設定 |
+| 量化與微調 | `yolov8n_hailo8l.quantized.har` | `ClientRunner.optimize` | 校正量化範圍、量化感知微調與雜訊分析 |
+| 硬體編譯 | `yolov8n_custom_hailo8l.hef` | `ClientRunner.compile` | Hailo-8L 資源配置，編譯為三個執行脈絡（contexts） |
+| 板端推論 | HEF | HailoRT C++ `Hef`、`VDevice`、`InferVStreams` | 載入、輸入串流、推論及偵測後處理 |
+
 **Hailo 路徑：** 匯出 ONNX 後指定 YOLO 的六個偵測輸出頭，建立 Hailo 封存表示（HAR），以模型腳本配置正規化、分數轉換及非極大值抑制（NMS），完成校正與量化感知微調後編譯為 HEF。板端使用 UINT8 影像介面，前處理與模型內正規化保持一致。
+
+#### TI C71／MMA：人體姿態轉換流程
+
+| 階段 | 產物 | 工具 |
+|---|---|---|
+| 原始模型 | `mobilenetv2_coco_256x192-d1e58e7b_20200727.pth` | MMPose 0.29.0、MMCV、PyTorch |
+| 匯出 | `mobilenetv2_pose_256x192.fp32.onnx` | PyTorch ONNX 匯出、ONNX Runtime 比對 |
+| 浮點驗證 | TI 浮點網路與輸出 | `tidl_model_import.out`、`PC_dsp_test_dl_algo.out` |
+| 校正 | 64 張校正人物裁切、32 張驗證人物裁切 | YOLO 人物框、MMPose 相容仿射裁切 |
+| INT8 匯入 | TIDL 網路 `.bin`、輸入／輸出描述 `.bin` | `tidl_model_import.out`、校正與圖編譯 |
+| 裝置規劃 | 網路內的資料流配置 | `ti_cnnperfsim.out` |
+| 韌體連結 | `c71-pose-v2.xe71` | TI C7000 編譯器、PDK IPC、SYS/BIOS、TIDL、MMALIB |
+| 執行 | 17 個關節 | C71 服務、MMA、RPMsg 客戶端 |
 
 **TI 路徑：** 先核對 ONNX 與 TI 浮點主機模擬，再以人物裁切資料完成 INT8 校正與目標圖編譯。部署時將網路與介面描述轉成韌體可使用的模型資產，使用 C7x 工具鏈將 TIDL、MMALIB 與姿態服務連結成韌體，並依輸出描述解碼熱圖。
 
@@ -209,4 +234,4 @@ sudo journalctl -b \
 - 目前追蹤一位人物並操作一個秤台物品；遮擋、出畫與低可信度可能使關節不可見。
 - 網頁供受信任的本機網路展示，沒有帳號驗證或對外網路部署設定。
 
-[第三方來源與授權註記](THIRD_PARTY_NOTICES.md) · [展示錄影流程](docs/demo-recording.md)
+[第三方來源與授權註記](THIRD_PARTY_NOTICES.md)
